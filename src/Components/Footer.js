@@ -25,11 +25,11 @@ const Footer = () => {
           </Link>
         </div>
         <Link
-          href={"https://github.com/Parth-Pidadi"}
+          href={"https://twitter.com/PPidadi"}
           target="_blank"
           className={"underline"}
         >
-          Say Hello <span className="no-underline">😊</span>{" "}
+          Drop a Hi! <span className="no-underline"></span>{" "}
         </Link>
       </Layout>
       <HireMe/>

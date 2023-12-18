@@ -27,7 +27,7 @@ const Logo = () => {
           transition:{duration:1,repeat:Infinity}
         }}
       >
-        GS  
+        ⌂
       </MotionLink>
     </div>
   );

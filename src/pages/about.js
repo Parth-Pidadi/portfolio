@@ -47,7 +47,7 @@ const About = () => {
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
-            text={"Passion Fuels Purpose! "}
+            text={"Think! Dream! Achieve! "}
             className="mb-16 lg:!text-7xl md:!text-6xl sm:!text-4xl sm:!mb-8"
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
@@ -56,28 +56,15 @@ const About = () => {
                 BIOGRAPHY
               </h2>
               <p className="font-medium">
-                Hey there! My name is Soumya Swaroop Sootar and I am a Full
-                Stack Web Developer with expertise in MERN Development. I
-                specialize in React, Express.js, Next.js,NPM, MongoDB, Chakra
-                UI,Tailwind CSS, Node JS, HTML, CSS, and JavaScript. My strong
-                collaboration and problem-solving skills were developed through
-                team projects, and I am highly motivated to apply my technical
-                skills to new and exciting projects.
+                
+                Hello there! I am Parth Pidadi, a highly motivated and skilled computer science student with a specialization in Artificial Intelligence (AI) and Machine Learning (ML). Having earned honors in AI and ML, I bring a wealth of knowledge and expertise to the table. My passion lies in leveraging cutting-edge technologies to solve complex problems and drive innovation in the realm of AI, ML, and Data Science.
+               
               </p>
 
-              <p className="font-medium my-4">
-                Some of my notable clone projects include ZOSTEL, a hostel
-                booking website with 60+ destinations across India and Nepal,
-                and FABALLEY, an Indian fashion e-commerce website with
-                thousands of trendy and affordable fashion options. I also
-                worked on cloning SHOP.COM, an online shopping website that
-                offers thousands of products from various retailers.
-              </p>
-
+              <br></br>
               <p className="font-medium">
-                Overall,I am a friendly and dedicated developer who is always
-                eager to take on new challenges and exceed expectations. I look
-                forward to working with you!
+              Proficient in NLP, Computer Vision, and Reinforcement Learning, I craft intelligent systems for language understanding and image pattern recognition. My ML prowess spans both supervised and unsupervised learning, utilizing TensorFlow and PyTorch for predictive modeling and deep learning. In Data Science, I excel in extracting insights from vast datasets through advanced statistical methods and machine learning. Fluent in Python and R, I employ tools like Jupyter, Pandas, and scikit-learn for seamless development. Committed to staying on the cutting edge, my passion lies in contributing my skills to projects that redefine possibilities in AI, ML, and Data Science. My concise, impactful solutions make me an invaluable asset, combining academic depth with practical innovation.
+                
               </p>
             </div>
             <div className="col-span-3 relative h-max rounded-2xl border-2 rounded-br-xl border-solid border-dark bg-light p-3 dark:bg-dark dark:border-primaryDark xl:col-span-4 md:order-1 md:col-span-8" >

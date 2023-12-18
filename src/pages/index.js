@@ -22,40 +22,29 @@ export default function Home() {
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
         <Layout className="pt-2 md:pt-16 sm:pt-8">
           <div className="flex items-center justify-between w-full lg:flex-col ">
-            <div className="w-2/5 md:w-full">
-              <Image
-                src={Profilepic}
-                alt={"DEVELOPER IMAGE"}
-                className="w-full h-auto lg:w-full md:inline-block md:w-full"
-                priority
-                sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              50vw"
-              />
-            </div>
-            <div className="w-3/5 flex flex-col items-center self-center lg:w-full lg:text-center ml-10 pl-10">
+            
+            <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center ml-10 pl-10">
               {/* <AnimatedText
                 text="Hey ! "
                 className="!text-6xl  !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               /> */}
               <AnimatedText style={{ color: 'red' }}
-                text="Hi! I'm Parth 🤟"
+                text="Hi! I'm Parth Pidadi🤟"
                 className="text-7xl  !text-left xl:!text-5xl lg:!text-center lg:!text-5xl lg:!mb-1  md:!text-5xl sm:!text-xl sm:!mb-1"
-                fontColour="!text-black"
+                fontColour="!text-black-500"
               />
               <AnimatedText
-                text="Machine Learning | Data Science Engineer"
+                text="Data Science | Artificial Intelligence "
                 fontColour="!text-black-500"
                 className="text-3xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <ul className="my-4 text-base font-medium md:text-sm sm:text-xs ">
-                <li className="m-1">Welcome to my data-driven world where curiosity meets computation! I am a passionate data science and machine learning 
-                  enthusiast on a mission to unravel the hidden stories within vast datasets. With a keen eye for patterns and a love for 
-                  turning raw information into actionable insights, I navigate the ever-evolving landscape of algorithms and analytics.
+                <li className="m-1"><b>Welcome to my data-driven world where curiosity meets computation! I am a passionate data science and machine learning 
+                  enthusiast on a mission to unravel the hidden stories within vast datasets. .
                   My portfolio is a testament to my journey through the realms of data, showcasing projects that range from predictive 
                   modeling to natural language processing. Join me in exploring the art and science of transforming data into knowledge, 
-                  as we embark on a journey to harness the power of machine learning for a smarter, more connected future. 
-                  Welcome to the intersection of data, innovation, and endless possibilities!</li>
+                  as we embark on a journey to harness the power of machine learning for a smarter, more connected future. </b>
+                 </li>
               </ul>
               {/* <p className="my-4 text-base font-medium md:text-sm sm:text-xs ">
                 As a Full-Stack Developer, I am well versed in Web
@@ -68,7 +57,7 @@ export default function Home() {
               <div className="flex flex-wrap  items-center self-start mt-2 lg:self-center">
                 <Link
                   href="https://parthpidadi.vercel.app/Parth_Pidadi_Resume.pdf"
-                  target={"_blank"}
+                  target={"_self"}
                   className="flex items-center m-1.5 bg-dark text-light p-2 px-6 rounded-lg text-lg font-semibold dark:text-dark dark:bg-light hover:dark:bg-dark hover:dark:text-light hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:border-light md:p-2 md:px-4 md:text-base"
                   download={true}
                 >
@@ -89,8 +78,8 @@ export default function Home() {
                   ABOUT <ImUserTie className="ml-4" />
                 </Link>
                 <Link
-                  href={"mailto:pidadiparth@gmail.com"}
-                  // href={"https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=pidadiparth@gmail.com"}
+                  
+                  href={"https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=pidadiparth@gmail.com"}
                   target="_blank"
                   className="ml-4 flex items-center m-1.5 bg-dark text-light p-2 rounded-lg text-lg font-semibold dark:text-dark dark:bg-light hover:dark:bg-dark hover:dark:text-light hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:border-light md:p-2 md:px-4 md:text-base"
                 >
@@ -98,11 +87,23 @@ export default function Home() {
                   <RiContactsBookFill className="ml-2" />
                 </Link>
               </div>
+           
               <div className="flex items-center self-start mt-2 lg:self-center"></div>
+            </div>
+            <div className="w-1/2 md:w-full">
+              <Image
+                src={Profilepic}
+                alt={"DEVELOPER IMAGE"}
+                className="w-full h-auto lg:w-full md:inline-block md:w-full"
+                priority
+                sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              50vw"
+              />
             </div>
           </div>
         </Layout>
-        <div className="absolute w-24 right-8 bottom-1  inline-block">
+        <div className="absolute w-40 right-8 bottom-1  inline-block">
           <Image
             src={LightBulb}
             alt="Bulb"
