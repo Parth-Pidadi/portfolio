@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 import LiIcon from "./LiIcon";
 
-const Details = ({ type, time, place, info }) => {
+const Details = ({ type, time, place, info, grade,coursework }) => {
   const ref = useRef(null);
   return (
     <li
@@ -19,7 +19,10 @@ const Details = ({ type, time, place, info }) => {
       <span className="capitalize font-medium text-dark/75 dark:text-primaryDark/75 xs:text-sm">
         {time}|{place}
       </span>
+      <p className="font-medium w-full md:text-sm">{grade}</p>
       <p className="font-medium w-full md:text-sm">{info}</p>
+      <p className="font-style: italic w-full md:text-sm">{coursework}</p>
+
     </motion.div>
     </li>
   );
@@ -48,23 +51,22 @@ const Education = () => {
         />
 
         <ul className="w-full flex flex-col items-start justify-between xs:ml-2">
-          <Details
-            type="Master of Science"
-            time="Aug 2024 - Apr 2026 "
-            place=" San Jose State University "
-            info="Completed 1200+ Hours of coursework in topics such as Machine Learning and Data Science"
-          />
+          
           <Details
             type="Bachelor Of Engineering in Computer Engineering"
-            time="August 2019-2023 "
+            time="August 2019- May 2023 "
             place=" Savitribai Phule Pune University , Pune"
             info="Pune, Maharashtra, India"
+            grade="Grade: 9.34 CGPA with Honors in AIML" 
+            coursework="Related Coursework: Python Programming, Business Analytic, AIML, Deep Learning, Database Management, High-
+            Performance Computing, Object Oriented Programming, Data Science and Big Data Analytics"
           />
           <Details
             type="12th board (Telangana State Board)"
-            time="2019 "
+            time="August 2017 - April 2019 "
             place=" Narayana Junior College"
             info="Hyderabad, Telangana, India"
+            grade= " Marks: 97% "
           />
         </ul>
       </div>

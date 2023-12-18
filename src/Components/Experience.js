@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 import LiIcon from "./LiIcon";
 
-const Details = ({ type, time, place, info }) => {
+const Details = ({ company, position, time, place, info1, info2 }) => {
   const ref = useRef(null);
   return (
     <li
@@ -15,11 +15,13 @@ const Details = ({ type, time, place, info }) => {
      whileInView={{y:0}}
      transition={{duration:0.5,type:"spring"}}>
 
-      <h3 className="capitalize font-bold text-3xl sm:text-xl xs:text-lg">{type}</h3>
+      <h3 className="capitalize font-bold text-3xl sm:text-xl xs:text-lg">{company}</h3>
+      <h6 className="capitalize font-style: italic text-xl sm:text-2xl xs:text-lg">{position}</h6>
       <span className="capitalize font-medium text-dark/75 dark:text-primaryDark/75 xs:text-sm">
         {time}|{place}
       </span>
-      <p className="font-medium w-full md:text-sm">{info}</p>
+      <p className="font-medium w-full md:text-sm">{info1}</p>
+      <p className="font-medium w-full md:text-sm">{info2}</p>
     </motion.div>
     </li>
   );
@@ -48,24 +50,26 @@ const Experience = () => {
         />
 
         <ul className="w-full flex flex-col items-start justify-between xs:ml-2">
+         
           <Details
-            type="Master of Science"
-            time="Aug 2024 - Apr 2026 "
-            place=" San Jose State University "
-            info="Completed 1200+ Hours of coursework in topics such as Machine Learning and Data Science"
+            company="PwC Virtual"
+            position="Virtual Intern, Forage"
+            time="September 2023 - December 2023 "
+            place="Pune, Maharashtra"
+            info1=" ● Conducted comprehensive data analysis and visualization tasks using the Call Centre dataset, transforming raw data
+            into actionable insights with Power BI."
+            info2=" ● Optimizing data queries and automated reporting processes to enhance workflow efficiency."
           />
           <Details
-            type="Bachelor Of Engineering in Computer Engineering"
-            time="August 2019-2023 "
-            place=" Savitribai Phule Pune University , Pune"
-            info="Pune, Maharashtra, India"
-          />
-          <Details
-            type="12th board (Telangana State Board)"
-            time="2019"
-            place=" Narayana Junior College"
-            info="Hyderabad, Telangana, India"
-          />
+            company="Pratyin Infotech"
+            position="Software Development Intern"
+            time="December 2021 - February 2022 "
+            place="Pune, Maharashtra"
+            info1=" ● Implemented a system for employee leave management, where the employee and the organization both can keep track
+            of employees leaves."
+            info2=" ● Utilized technologies such as Node.js, NoSQL, and Bootstrap for the development of the website and passport.js for
+            authentication purposes."
+          />  
         </ul>
       </div>
     </div>
