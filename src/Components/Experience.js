@@ -55,16 +55,16 @@ const Experience = () => {
             info="Completed 1200+ Hours of coursework in topics such as Machine Learning and Data Science"
           />
           <Details
-            type="Bachelor Of Engineering"
+            type="Bachelor Of Engineering in Computer Engineering"
             time="August 2019-2023 "
             place=" Savitribai Phule Pune University , Pune"
             info="Pune, Maharashtra, India"
           />
           <Details
-            type="12th board (CBSE)"
-            time="2018 "
-            place=" Nowrosjee Wadia College"
-            info="Pune, Maharashtra, India"
+            type="12th board (Telangana State Board)"
+            time="2019"
+            place=" Narayana Junior College"
+            info="Hyderabad, Telangana, India"
           />
         </ul>
       </div>

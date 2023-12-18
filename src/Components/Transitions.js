@@ -5,7 +5,7 @@ import React from 'react'
 const Transitions = () => {
   return (
     <>
-        <motion.div className='fixed top-0 bottom-0 right-full w-screen h-screen z-50 bg-primary'
+        <motion.div className='fixed top-0 bottom-0 right-full w-screen h-screen z-50 bg-orange-600'
             initial={{x:"100%",width:"100%"}}
             animate={{x:"0%",width:"0%"}}
             transition={{duration:0.8,ease:"easeInOut"}}
@@ -15,7 +15,7 @@ const Transitions = () => {
             animate={{x:"0%",width:"0%"}}
             transition={{delay:0.2,duration:0.8,ease:"easeInOut"}}
         />
-        <motion.div className='fixed top-0 bottom-0 right-full w-screen h-screen z-10 bg-slate-700'
+        <motion.div className='fixed top-0 bottom-0 right-full w-screen h-screen z-10 bg-green-950'
             initial={{x:"100%",width:"100%"}}
             animate={{x:"0%",width:"0%"}}
             transition={{delay:0.4,duration:0.8,ease:"easeInOut"}}

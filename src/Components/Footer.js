@@ -16,16 +16,16 @@ const Footer = () => {
           <span className="mt-1">{<AiFillHeart color="red" />}</span>&nbsp;by
           &nbsp;
           <Link
-            href={"https://github.com/gaurav13020"}
+            href={"https://github.com/Parth-Pidadi"}
             className={"underline"}
             target="_blank"
           >
             {" "}
-            Gaurav Singh
+            Parth Pidadi
           </Link>
         </div>
         <Link
-          href={"https://www.linkedin.com/in/gaurav13020/"}
+          href={"https://github.com/Parth-Pidadi"}
           target="_blank"
           className={"underline"}
         >
