@@ -194,16 +194,7 @@ const projects = () => {
                 summary="Converso is a real-time chat application built using React, Socket.IO, MongoDB, Express, Node.js,Mongoose and Chakra UI. The app enables users to chat with each other instantly, while offering an intuitive and modern UI. Converso is built to be scalable and reliable, and can be easily deployed to any environment. "
               />
             </div>
-            <div className="col-span-12">
-              <FeatureProject
-                type={"FEATURE PROJECT"}
-                title={"F A B A L L E Y"}
-                link="https://fab-alley-clone-10.vercel.app/"
-                github={"https://github.com/soumyasootar/FabAlley"}
-                img={uberimg}
-                summary="FABALLEY is an Indian e-commerce website that offers a vast collection of trendy and affordable fashion styles. With authenticated login/signup, voice search, and sorting/filtering options, customers can enjoy a seamless shopping experience. The website features a well-designed landing page, login/signup with Email JS, cart, address, payment, and profile pages that are responsive across all devices. FABALLEY also provides multiple user login options, and its backend is built using Express and MongoDB Mongoose."
-              />
-            </div>
+            
             
           </div>
         </Layout>
