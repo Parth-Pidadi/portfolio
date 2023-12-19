@@ -5,14 +5,14 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import zostelimg from "../../public/images/projects/ZOSTEL.png";
-import fabimg from "../../public/images/projects/Faballey.png";
+import ytimg from "../../public/images/projects/YT-analytics.png";
+import uberimg from "../../public/images/projects/Uber-analytics.png";
 import shopimg from "../../public/images/projects/Shop.png";
 import Transitions from "@/Components/Transitions";
 import Portfolioimg from "../../public/images/projects/Portfolio.png";
-import Placeprepimg from "../../public/images/projects/Placeprep.com.png";
-import CockTailCompassimg from "../../public/images/projects/CocktailCompass.png";
-import Conversoimg from "../../public/images/projects/Converso.png";
+import anprimg from "../../public/images/projects/ANPR.jpeg";
+import bscimg from "../../public/images/projects/Black Scholes Calculator.jpeg";
+import olympicsimg from "../../public/images/projects/olympics.jpeg";
 
 const FeatureProject = ({ type, title, summary, img, github, link }) => {
   return (
@@ -129,17 +129,27 @@ const projects = () => {
       <main className="w-full mb-16 flex flex-col justify-center items-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
-            text="Imagination Trumps Knowledge!"
+            text="It is not about ideas, it is about making ideas happen"
             className="mb-16 lg:!text-7xl sm:!mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-24 xl:gap-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-5 ">
+          <div className="col-span-12">
+              <FeatureProject
+                type={"FEATURE PROJECT"}
+                title={"F A B A L L E Y"}
+                link="https://fab-alley-clone-10.vercel.app/"
+                github={"https://github.com/soumyasootar/FabAlley"}
+                img={uberimg}
+                summary="FABALLEY is an Indian e-commerce website that offers a vast collection of trendy and affordable fashion styles. With authenticated login/signup, voice search, and sorting/filtering options, customers can enjoy a seamless shopping experience. The website features a well-designed landing page, login/signup with Email JS, cart, address, payment, and profile pages that are responsive across all devices. FABALLEY also provides multiple user login options, and its backend is built using Express and MongoDB Mongoose."
+              />
+            </div>
             <div className="col-span-12">
               <FeatureProject
                 type={"FEATURE PROJECT (CLIENT WORK)"}
                 title={"P L A C E P R E P"}
                 link="https://place-prep-com-sigma.vercel.app/HomePage/index.html"
                 github={"https://github.com/soumyasootar/PlacePrep.com"}
-                img={Placeprepimg}
+                img={anprimg}
                 summary="Placeprep.com is a Educational website where anybody can learn about coding related topics and languages. Placeprep allows you to give MCQ test, apart from that it has two logins one for user login and another for admin with Email validation and Chatbot,Quiz,Proctoring,etc .This website was developed using HTML,SCSS,CSS,Javascript,Bootstrap & JSON Server."
               />
             </div>
@@ -149,18 +159,19 @@ const projects = () => {
                 title={"Z O S T E L"}
                 link="https://zostel-ten.vercel.app/"
                 github={"https://github.com/soumyasootar/zostel"}
-                img={zostelimg}
+                img={ytimg}
                 summary="Zostel is a hostel booking website with over 60+ destinations across India and Nepal. The website features authenticated login with email verification, the ability to book multiple rooms, voice search, and dark mode. The tech stack used includes React, React-Redux, JS, Chakra UI, Framer Motion, and Email JS. The project responsibilities included implementing Email JS on the login page, coding the destination page, debugging the payment page, ensuring responsiveness, debugging the room booking page, and maintaining the GitHub codebase."
               />
             </div>
+           
             <div className="col-span-12">
               <FeatureProject
                 type={"FEATURE PROJECT"}
-                title={"F A B A L L E Y"}
-                link="https://fab-alley-clone-10.vercel.app/"
-                github={"https://github.com/soumyasootar/FabAlley"}
-                img={fabimg}
-                summary="FABALLEY is an Indian e-commerce website that offers a vast collection of trendy and affordable fashion styles. With authenticated login/signup, voice search, and sorting/filtering options, customers can enjoy a seamless shopping experience. The website features a well-designed landing page, login/signup with Email JS, cart, address, payment, and profile pages that are responsive across all devices. FABALLEY also provides multiple user login options, and its backend is built using Express and MongoDB Mongoose."
+                title={"C O N V E R S O"}
+                link="https://github.com/soumyasootar/Converso"
+                github={"https://github.com/soumyasootar/Converso"}
+                img={olympicsimg}
+                summary="Converso is a real-time chat application built using React, Socket.IO, MongoDB, Express, Node.js,Mongoose and Chakra UI. The app enables users to chat with each other instantly, while offering an intuitive and modern UI. Converso is built to be scalable and reliable, and can be easily deployed to any environment. "
               />
             </div>
             <div className="col-span-12">
@@ -169,41 +180,21 @@ const projects = () => {
                 title={"C O N V E R S O"}
                 link="https://github.com/soumyasootar/Converso"
                 github={"https://github.com/soumyasootar/Converso"}
-                img={Conversoimg}
+                img={Portfolioimg}
                 summary="Converso is a real-time chat application built using React, Socket.IO, MongoDB, Express, Node.js,Mongoose and Chakra UI. The app enables users to chat with each other instantly, while offering an intuitive and modern UI. Converso is built to be scalable and reliable, and can be easily deployed to any environment. "
               />
             </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type={"PROJECT"}
-                title={"P O R T F O L I O"}
-                link="https://soumyaswaroopsootar.vercel.app/"
-                github={"https://github.com/soumyasootar/Portfolio"}
-                img={Portfolioimg}
-                summary="Portfolio using NextJS,Framer-Motion and TailwindCSS"
-                // summary="A portfolio website using Nextjs and TailwindCSS is a great way to showcase skills. It has a clean design and easy navigation with separate pages for projects, skills, and about me. Projects have details on tools used, skills list expertise, and About Me page has bio, resume, and contact information. It offers a professional online presence for potential clients/employers to learn about skills and accomplishments."
+            <div className="col-span-12">
+              <FeatureProject
+                type={"FEATURE PROJECT"}
+                title={"C O N V E R S O"}
+                link="https://github.com/soumyasootar/Converso"
+                github={"https://github.com/soumyasootar/Converso"}
+                img={bscimg}
+                summary="Converso is a real-time chat application built using React, Socket.IO, MongoDB, Express, Node.js,Mongoose and Chakra UI. The app enables users to chat with each other instantly, while offering an intuitive and modern UI. Converso is built to be scalable and reliable, and can be easily deployed to any environment. "
               />
             </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type={"PROJECT"}
-                title={"S h o p . com"}
-                link="https://shopclone10.netlify.app/project.html"
-                github={"https://github.com/soumyasootar/www.shop.com"}
-                img={shopimg}
-                summary="HTML, JS, and CSS used to create an e-commerce website with authentication, sorting, filtering, and voice search functionality."
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type={"PROJECT"}
-                title={"Cocktail Compass"}
-                link="https://cocktailcompass.vercel.app/"
-                github={"https://github.com/soumyasootar/CocktailCompass"}
-                img={CockTailCompassimg}
-                summary="Find your Favourite Cocktails Here. Simple Cocktail Searching App made with React,Vite , Chakra UI , React-Redux."
-              />
-            </div>
+            
           </div>
         </Layout>
       </main>

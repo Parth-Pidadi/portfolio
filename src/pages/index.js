@@ -4,7 +4,7 @@ import Layout from "@/Components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Profilepic from "../../public/images/profile/homeimage1.png";
+import Profilepic from "../../public/images/profile/homeiage1.png";
 import { RiContactsBookFill } from "react-icons/ri";
 import LightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import Transitions from "@/Components/Transitions";

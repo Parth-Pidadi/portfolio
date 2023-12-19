@@ -276,3 +276,9 @@
     transform: rotate(0deg);
   }
 }
+
+/* Example styles for dark mode */
+.dark {
+  background-color: #1a202c;
+  color: #cbd5e0;
+}
