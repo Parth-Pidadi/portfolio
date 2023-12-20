@@ -7,7 +7,6 @@ import Link from "next/link";
 import React from "react";
 import ytimg from "../../public/images/projects/YT-analytics.png";
 import uberimg from "../../public/images/projects/Uber-analytics.png";
-import shopimg from "../../public/images/projects/Shop.png";
 import Transitions from "@/Components/Transitions";
 import Portfolioimg from "../../public/images/projects/Portfolio.png";
 import anprimg from "../../public/images/projects/ANPR.jpeg";
@@ -201,7 +200,7 @@ const projects = () => {
                 link="https://fab-alley-clone-10.vercel.app/"
                 github={"https://github.com/soumyasootar/FabAlley"}
                 img={uberimg}
-                summary="FABALLEY is an Indian e-commerce website that offers a vast collection of trendy and affordable fashion styles. With authenticated login/signup, voice search, and sorting/filtering options, customers can enjoy a seamless shopping experience. The website features a well-designed landing page, login/signup with Email JS, cart, address, payment, and profile pages that are responsive across all devices. FABALLEY also provides multiple user login options, and its backend is built using Express and MongoDB Mongoose."
+                summary="F is an Indian e-commerce website that offers a vast collection of trendy and affordable fashion styles. With authenticated login/signup, voice search, and sorting/filtering options, customers can enjoy a seamless shopping experience. The website features a well-designed landing page, login/signup with Email JS, cart, address, payment, and profile pages that are responsive across all devices. FABALLEY also provides multiple user login options, and its backend is built using Express and MongoDB Mongoose."
               />
             </div>
             
