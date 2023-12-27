@@ -166,12 +166,13 @@ const projects = () => {
            
             <div className="col-span-12">
               <FeatureProject
-                type={"FEATURE PROJECT"}
-                title={"C O N V E R S O"}
-                link="https://github.com/soumyasootar/Converso"
-                github={"https://github.com/soumyasootar/Converso"}
+                
+                title={"Olympics 105 years Data Visualisation"}
+                link="https://github.com/Parth-Pidadi/OlympicsDataVisualisation"
+                github={"https://github.com/Parth-Pidadi/OlympicsDataVisualisation"}
                 img={olympicsimg}
-                summary="Converso is a real-time chat application built using React, Socket.IO, MongoDB, Express, Node.js,Mongoose and Chakra UI. The app enables users to chat with each other instantly, while offering an intuitive and modern UI. Converso is built to be scalable and reliable, and can be easily deployed to any environment. "
+                summary="
+                In this project, I conducted comprehensive data analysis for the Olympics, leveraging Power BI and Jupyter Notebook. Using diverse datasets, I explored the evolution of Olympic events over time, delving into factors such as participant diversity, athlete performance, and various sports metrics. Employing Power BI, I created an insightful dashboard offering an analytical overview of individual and country performances. The analysis incorporated factors like gender distribution, medal counts, and event details. This project utilized Power BI for graphical representation and Jupyter Notebook for analytical insights, showcasing my proficiency in data analysis, visualization, and storytelling using tools crucial for contemporary business intelligence."
               />
             </div>
             <div className="col-span-12">
@@ -194,16 +195,7 @@ const projects = () => {
                 summary="Converso is a real-time chat application built using React, Socket.IO, MongoDB, Express, Node.js,Mongoose and Chakra UI. The app enables users to chat with each other instantly, while offering an intuitive and modern UI. Converso is built to be scalable and reliable, and can be easily deployed to any environment. "
               />
             </div>
-            <div className="col-span-12">
-              <FeatureProject
-                type={"FEATURE PROJECT"}
-                title={"F A B A L L E Y"}
-                link="https://fab-alley-clone-10.vercel.app/"
-                github={"https://github.com/soumyasootar/FabAlley"}
-                img={uberimg}
-                summary=" It is  portal is an Indian e-commerce website that offers a vast collection of trendy and affordable fashion styles. With authenticated login/signup, voice search, and sorting/filtering options, customers can enjoy a seamless shopping experience. The website features a well-designed landing page, login/signup with Email JS, cart, address, payment, and profile pages that are responsive across all devices. FABALLEY also provides multiple user login options, and its backend is built using Express and MongoDB Mongoose."
-              />
-            </div>
+            
             
           </div>
         </Layout>
