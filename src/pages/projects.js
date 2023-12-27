@@ -143,11 +143,12 @@ const projects = () => {
             <div className="col-span-12">
               <FeatureProject
                 
-                title={"P L A C E P R E P"}
-                link="https://place-prep-com-sigma.vercel.app/HomePage/index.html"
-                github={"https://github.com/soumyasootar/PlacePrep.com"}
+                title={"ANPR System for Motorcyclist riding without Helmet"}
+                link="https://github.com/Parth-Pidadi/ANPR-System"
+                github={"https://github.com/Parth-Pidadi/ANPR-System"}
                 img={anprimg}
-                summary="Placeprep.com is a Educational website where anybody can learn about coding related topics and languages. Placeprep allows you to give MCQ test, apart from that it has two logins one for user login and another for admin with Email validation and Chatbot,Quiz,Proctoring,etc .This website was developed using HTML,SCSS,CSS,Javascript,Bootstrap & JSON Server."
+                summary="
+                In the development of an Automatic Number Plate Recognition (ANPR) System for motorcyclists riding without helmets, I utilized Python with the YOLOv8 architecture for effective object detection. The graphical user interface (GUI) was implemented using JavaBeans. The system takes input from a video feed, and through the integration of the EasyOCR library, it identifies motorcyclists not wearing helmets. In such cases, the system captures and stores the number plate information in a database. This comprehensive solution enhances safety monitoring by automatically identifying helmet non-compliance and maintaining a record of associated vehicle details."
               />
             </div>
             <div className="col-span-12">
