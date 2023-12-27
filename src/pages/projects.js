@@ -142,7 +142,7 @@ const projects = () => {
             </div>
             <div className="col-span-12">
               <FeatureProject
-                type={"FEATURE PROJECT (CLIENT WORK)"}
+                
                 title={"P L A C E P R E P"}
                 link="https://place-prep-com-sigma.vercel.app/HomePage/index.html"
                 github={"https://github.com/soumyasootar/PlacePrep.com"}
@@ -152,10 +152,10 @@ const projects = () => {
             </div>
             <div className="col-span-12">
               <FeatureProject
-                type={"FEATURE PROJECT"}
-                title={"Z O S T E L"}
-                link="https://zostel-ten.vercel.app/"
-                github={"https://github.com/soumyasootar/zostel"}
+                
+                title={"Youtube Data Analysis"}
+                link="https://github.com/Parth-Pidadi/YT-DATA-ANALYSIS"
+                github={"https://github.com/Parth-Pidadi/YT-DATA-ANALYSIS"}
                 img={ytimg}
                 summary="This project's objective is to securely manage and analyze structured and semi-structured data from YouTube videos, categorized by video categories and trending metrics. The goals include developing mechanisms for data ingestion, implementing an ETL system for data transformation, establishing a centralized data lake, ensuring scalability as data size increases, and leveraging AWS cloud services for processing. 
                 Service utilized :  Amazon S3, AWS IAM, QuickSight, AWS Glue, AWS Lambda, AWS Athena
