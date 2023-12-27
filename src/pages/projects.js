@@ -67,7 +67,7 @@ const FeatureProject = ({ type, title, summary, img, github, link }) => {
   );
 };
 
-const Project = ({ type, title, summary, img, github, link }) => {
+const Project = ({  title, summary, img, github, link }) => {
   return (
     <>
       <article className=" dark:bg-dark dark:border-light w-full flex relative shadow-2xl items-center flex-col justify-center rounded-2xl border border-solid border-dark bg-light p-6 xs:p-4">
@@ -82,9 +82,7 @@ const Project = ({ type, title, summary, img, github, link }) => {
         </Link>
 
         <div className="w-full flex flex-col items-start justify-between mt-4">
-          <span className="text-primary dark:text-primaryDark font-medium text-xl lg:text-lg md:text-base ">
-            {type}
-          </span>
+          
           <Link
             href={link}
             target="_blank"
@@ -134,12 +132,12 @@ const projects = () => {
           <div className="grid grid-cols-12 gap-24 xl:gap-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-5 ">
           <div className="col-span-12">
               <FeatureProject
-                type={"FEATURE PROJECT"}
-                title={"F A B A L L E Y"}
-                link="https://fab-alley-clone-10.vercel.app/"
-                github={"https://github.com/soumyasootar/FabAlley"}
+               
+                title={"Uber Data Analysis"}
+                link="https://lookerstudio.google.com/s/lFOwfPgEm2o"
+                github={"https://github.com/Parth-Pidadi/UBER_datapipeline_with-analysis"}
                 img={uberimg}
-                summary="FABALLEY is an Indian e-commerce website that offers a vast collection of trendy and affordable fashion styles. With authenticated login/signup, voice search, and sorting/filtering options, customers can enjoy a seamless shopping experience. The website features a well-designed landing page, login/signup with Email JS, cart, address, payment, and profile pages that are responsive across all devices. FABALLEY also provides multiple user login options, and its backend is built using Express and MongoDB Mongoose."
+                summary="The Uber ETL Pipeline project is created using various services of Google Cloud Platform. I designed and implemented an efficient data processing system using Python. Leveraging Google Storage for scalable storage, Compute Instances for task orchestration, and BigQuery for a powerful data warehouse, the pipeline ensured rapid analytics. Integration with Looker Studio provided user-friendly data visualizations, enhancing accessibility and usability. This ETL pipeline, part of a cloud-native architecture, optimized Uber's data management and analytics capabilities"
               />
             </div>
             <div className="col-span-12">
@@ -159,7 +157,9 @@ const projects = () => {
                 link="https://zostel-ten.vercel.app/"
                 github={"https://github.com/soumyasootar/zostel"}
                 img={ytimg}
-                summary="Zostel is a hostel booking website with over 60+ destinations across India and Nepal. The website features authenticated login with email verification, the ability to book multiple rooms, voice search, and dark mode. The tech stack used includes React, React-Redux, JS, Chakra UI, Framer Motion, and Email JS. The project responsibilities included implementing Email JS on the login page, coding the destination page, debugging the payment page, ensuring responsiveness, debugging the room booking page, and maintaining the GitHub codebase."
+                summary="This project's objective is to securely manage and analyze structured and semi-structured data from YouTube videos, categorized by video categories and trending metrics. The goals include developing mechanisms for data ingestion, implementing an ETL system for data transformation, establishing a centralized data lake, ensuring scalability as data size increases, and leveraging AWS cloud services for processing. 
+                Service utilized :  Amazon S3, AWS IAM, QuickSight, AWS Glue, AWS Lambda, AWS Athena
+                "
               />
             </div>
            
@@ -200,7 +200,7 @@ const projects = () => {
                 link="https://fab-alley-clone-10.vercel.app/"
                 github={"https://github.com/soumyasootar/FabAlley"}
                 img={uberimg}
-                summary=" h portal is an Indian e-commerce website that offers a vast collection of trendy and affordable fashion styles. With authenticated login/signup, voice search, and sorting/filtering options, customers can enjoy a seamless shopping experience. The website features a well-designed landing page, login/signup with Email JS, cart, address, payment, and profile pages that are responsive across all devices. FABALLEY also provides multiple user login options, and its backend is built using Express and MongoDB Mongoose."
+                summary=" It is  portal is an Indian e-commerce website that offers a vast collection of trendy and affordable fashion styles. With authenticated login/signup, voice search, and sorting/filtering options, customers can enjoy a seamless shopping experience. The website features a well-designed landing page, login/signup with Email JS, cart, address, payment, and profile pages that are responsive across all devices. FABALLEY also provides multiple user login options, and its backend is built using Express and MongoDB Mongoose."
               />
             </div>
             
