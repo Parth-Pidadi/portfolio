@@ -177,22 +177,22 @@ const projects = () => {
             </div>
             <div className="col-span-12">
               <FeatureProject
-                type={"FEATURE PROJECT"}
-                title={"C O N V E R S O"}
-                link="https://github.com/soumyasootar/Converso"
-                github={"https://github.com/soumyasootar/Converso"}
+                
+                title={"My Portfolio Website"}
+                link="https://parthpidadi.vercel.app/"
+                github={"https://github.com/Parth-Pidadi/portfolio"}
                 img={Portfolioimg}
-                summary="Converso is a real-time chat application built using React, Socket.IO, MongoDB, Express, Node.js,Mongoose and Chakra UI. The app enables users to chat with each other instantly, while offering an intuitive and modern UI. Converso is built to be scalable and reliable, and can be easily deployed to any environment. "
+                summary="I crafted a dynamic portfolio website using Node.js and Tailwind CSS, featuring dedicated pages highlighting my education, professional experiences, projects, and skills. Leveraging the power of Node.js, the website delivers a seamless and interactive user experience, while Tailwind CSS ensures a modern and visually appealing design. The Education and Experiences section provide insights into my academic and professional journey, while the Projects page showcases my diverse range of accomplishments. Additionally, the Skills section outlines my proficiency in various technologies. This portfolio website serves as a comprehensive snapshot of my background, expertise, and projects, reflecting my commitment to effective web development. "
               />
             </div>
             <div className="col-span-12">
               <FeatureProject
-                type={"FEATURE PROJECT"}
-                title={"C O N V E R S O"}
-                link="https://github.com/soumyasootar/Converso"
-                github={"https://github.com/soumyasootar/Converso"}
+                
+                title={"Black Scholes Option Calculator"}
+                link="https://github.com/Parth-Pidadi/Black-Scholes-OptCalc"
+                github={"https://github.com/Parth-Pidadi/Black-Scholes-OptCalc"}
                 img={bscimg}
-                summary="Converso is a real-time chat application built using React, Socket.IO, MongoDB, Express, Node.js,Mongoose and Chakra UI. The app enables users to chat with each other instantly, while offering an intuitive and modern UI. Converso is built to be scalable and reliable, and can be easily deployed to any environment. "
+                summary="I developed a Black-Scholes Option Calculator using Python within a Jupyter Notebook. The calculator leverages the Black-Scholes-Merton model to estimate option prices, providing a valuable tool for financial analysis and decision-making. Through the Jupyter Notebook interface, users can input key parameters such as stock price, strike price, time to expiration, volatility, and risk-free interest rate to calculate the theoretical option price, delta, gamma, and other essential metrics. This project not only demonstrates my proficiency in financial modeling and Python programming but also serves as a practical tool for individuals involved in options trading or financial analysis. "
               />
             </div>
             
