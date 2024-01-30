@@ -45,6 +45,7 @@ const Skills = () => {
         <Skill name="GCP" x="29vw" y="10vw"/>
         <Skill name="OPENCV" x="-25vw" y="-20vw"/>
         <Skill name="Scipy" x="25vw" y="-20vw"/>
+        <Skill name="BigQuery" x="23vw" y="-20vw"/>
         {/* Add more skills with different names and positions */}
       </div>
     </>

@@ -128,7 +128,7 @@ const Navbar = () => {
           >
             <LinkedInIcon />
           </motion.a>
-          {/* darktheme button  */}
+        
           {/*mode === "light" ? "bg-light text-dark" : "bg-dark text-light"*/}
           <button
             className={`ml-4 flex items-center justify-center rounded-full p-1`}
