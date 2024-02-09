@@ -23,7 +23,7 @@ export default function Home() {
         <Layout className="pt-2 md:pt-16 sm:pt-8">
           <div className="flex items-center justify-between w-full lg:flex-col ">
             
-            <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center ml-10 pl-10">
+            <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
               {/* <AnimatedText
                 text="Hey ! "
                 className="!text-6xl  !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
