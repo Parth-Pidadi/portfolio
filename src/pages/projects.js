@@ -158,7 +158,7 @@ const FeaturedCard = ({ title, summary, stack, github, link, category, metrics, 
     >
       <div className="grid grid-cols-2 lg:grid-cols-1">
         {/* Image / placeholder */}
-        <div className="relative overflow-hidden bg-elevated dark:bg-elevated min-h-[240px] lg:min-h-[200px]">
+        <div className="relative overflow-hidden bg-elevated dark:bg-elevated min-h-[240px] lg:min-h-[180px] sm:min-h-[150px]">
           {img ? (
             <Image
               src={img}
@@ -179,7 +179,7 @@ const FeaturedCard = ({ title, summary, stack, github, link, category, metrics, 
         </div>
 
         {/* Content */}
-        <div className="p-8 lg:p-6 flex flex-col">
+        <div className="p-8 lg:p-6 sm:p-4 flex flex-col">
           <div className="flex items-start justify-between gap-3 mb-3">
             <span className={`font-mono text-[10px] tracking-[0.15em] uppercase px-2.5 py-1 rounded-full border ${cat.color} flex-shrink-0`}>
               {cat.label}
@@ -198,10 +198,10 @@ const FeaturedCard = ({ title, summary, stack, github, link, category, metrics, 
             </div>
           </div>
 
-          <h2 className="font-syne font-extrabold text-xl dark:text-light text-ink mb-3 leading-tight">
+          <h2 className="font-syne font-extrabold text-xl sm:text-lg dark:text-light text-ink mb-3 leading-tight">
             {title}
           </h2>
-          <p className="font-lora text-sm leading-relaxed text-muted dark:text-muted-light mb-4 flex-1">
+          <p className="font-lora text-sm leading-relaxed text-muted dark:text-muted-light mb-4 flex-1 line-clamp-5 lg:line-clamp-none">
             {summary}
           </p>
 
@@ -262,7 +262,7 @@ const SmallCard = ({ title, summary, stack, github, link, category, metrics, img
       )}
 
       {/* Content */}
-      <div className="p-6 flex flex-col flex-1">
+      <div className="p-5 sm:p-4 xs:p-3 flex flex-col flex-1">
         <div className="flex items-center justify-between mb-3">
           <span className={`font-mono text-[10px] tracking-[0.12em] uppercase px-2.5 py-1 rounded-full border ${cat.color}`}>
             {cat.label}
@@ -340,11 +340,11 @@ const ProjectsPage = () => {
             className="mb-16"
           >
             <p className="font-mono text-xs tracking-[0.2em] uppercase text-muted mb-3">/ selected work</p>
-            <h1 className="font-syne font-extrabold text-6xl md:text-5xl sm:text-4xl leading-tight">
+            <h1 className="font-syne font-black text-6xl md:text-5xl sm:text-4xl xs:text-3xl leading-tight">
               Projects
               <span className="text-gold">.</span>
             </h1>
-            <p className="font-lora text-base text-muted dark:text-muted-light mt-4 max-w-xl">
+            <p className="font-lora text-base sm:text-sm text-muted dark:text-muted-light mt-4 max-w-xl">
               Production systems, research experiments, and engineering deep-dives across
               AI, data infrastructure, and full-stack development.
             </p>
@@ -377,7 +377,7 @@ const ProjectsPage = () => {
           </div>
 
           {/* Grid of rest */}
-          <div className="grid grid-cols-2 sm:grid-cols-1 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-1 gap-5 sm:gap-4">
             {rest.map((p, i) => (
               <SmallCard key={p.title} {...p} index={i} />
             ))}

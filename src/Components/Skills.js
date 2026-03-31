@@ -77,8 +77,8 @@ const categoryVariants = {
 const Skills = () => {
   return (
     <section className="mt-24 mb-8">
-      <div className="flex items-baseline gap-4 mb-12">
-        <h2 className="font-syne font-extrabold text-5xl md:text-4xl sm:text-3xl dark:text-light text-ink">
+      <div className="flex items-baseline gap-4 mb-8 sm:mb-6">
+        <h2 className="font-syne font-black text-5xl md:text-4xl sm:text-3xl xs:text-2xl dark:text-light text-ink">
           Skills
         </h2>
         <span className="font-mono text-xs tracking-widest uppercase text-muted">50+</span>
@@ -89,13 +89,13 @@ const Skills = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-60px" }}
-        className="grid grid-cols-2 xl:grid-cols-2 lg:grid-cols-1 gap-8"
+        className="grid grid-cols-2 xl:grid-cols-2 lg:grid-cols-1 gap-6 sm:gap-4"
       >
         {skillCategories.map((cat) => (
           <motion.div
             key={cat.label}
             variants={categoryVariants}
-            className="p-6 rounded-2xl border border-border dark:border-border bg-light-surface dark:bg-surface"
+            className="p-5 sm:p-4 xs:p-3 rounded-2xl border border-border dark:border-border bg-light-surface dark:bg-surface"
           >
             <div className="flex items-center gap-2 mb-4">
               <span className={`w-2 h-2 rounded-full ${cat.dot}`} />

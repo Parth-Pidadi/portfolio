@@ -55,7 +55,7 @@ const Navbar = () => {
   const toggle = () => setIsOpen((v) => !v);
 
   return (
-    <header className="z-20 w-full px-16 lg:px-10 md:px-6 sm:px-4 py-5 flex items-center justify-between relative">
+    <header className="z-20 w-full px-16 lg:px-10 md:px-6 sm:px-4 xs:px-3 py-5 sm:py-4 flex items-center justify-between relative">
       {/* Hamburger */}
       <button
         className="flex-col justify-center items-center hidden z-30 lg:flex gap-[5px] p-1"

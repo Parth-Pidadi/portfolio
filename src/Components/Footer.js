@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Footer = () => {
   return (
     <footer className="w-full border-t border-border dark:border-border dark:text-light text-ink mt-8">
-      <Layout className="py-6 flex items-center justify-between sm:flex-col sm:gap-4 sm:py-8">
+      <Layout className="py-6 flex items-center justify-between md:flex-col md:gap-4 md:items-start sm:py-6 xs:py-4">
         <span className="font-mono text-xs tracking-widest uppercase text-muted">
           &copy; {new Date().getFullYear()} Parth Pidadi
         </span>

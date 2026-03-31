@@ -52,7 +52,7 @@ const Details = ({ company, position, time, place, bullets }) => {
   return (
     <li
       ref={ref}
-      className="my-10 first:mt-0 last:mb-0 w-[65%] mx-auto flex flex-col items-start justify-between md:w-[80%] xs:w-full"
+      className="my-10 first:mt-0 last:mb-0 w-[65%] mx-auto flex flex-col items-start justify-between md:w-[80%] sm:w-[90%] xs:w-full"
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -93,8 +93,8 @@ const Experience = () => {
 
   return (
     <div className="mt-24 mb-8">
-      <div className="flex items-baseline gap-4 mb-12">
-        <h2 className="font-syne font-extrabold text-5xl md:text-4xl sm:text-3xl dark:text-light text-ink">
+      <div className="flex items-baseline gap-4 mb-8 sm:mb-6">
+        <h2 className="font-syne font-black text-5xl md:text-4xl sm:text-3xl xs:text-2xl dark:text-light text-ink">
           Experience
         </h2>
         <span className="font-mono text-xs tracking-widest uppercase text-muted">4 roles</span>

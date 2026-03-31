@@ -43,138 +43,126 @@ const About = () => {
         <title>Parth Pidadi — About</title>
         <meta
           name="description"
-          content="About Parth Pidadi — MS Data Science at Stony Brook University. Data Scientist and ML Engineer building production AI systems and distributed infrastructure."
+          content="About Parth Pidadi — MS Data Science at Stony Brook University. Data Scientist and ML Engineer."
         />
       </Head>
       <Transitions />
       <main className="flex w-full flex-col items-center justify-center dark:text-light text-ink">
-        <Layout className="pt-12 pb-24">
+        <Layout className="pt-12 pb-20">
 
-          {/* ─── Hero heading ─── */}
+          {/* Heading */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="mb-16"
+            className="mb-12 sm:mb-8"
           >
             <p className="font-mono text-xs tracking-[0.2em] uppercase text-muted mb-3">/ about me</p>
-            <h1 className="font-syne font-extrabold text-6xl md:text-5xl sm:text-4xl leading-tight dark:text-light text-ink">
+            <h1 className="font-syne font-black text-6xl md:text-5xl sm:text-4xl xs:text-3xl leading-tight dark:text-light text-ink">
               Build. Ship.<br />
               <span className="text-gold">Iterate.</span>
             </h1>
           </motion.div>
 
-          {/* ─── Bio + Photo ─── */}
-          <div className="grid w-full grid-cols-8 gap-12 sm:gap-8 mb-20">
+          {/* Bio + Photo — stacks cleanly on mobile */}
+          <div className="flex flex-col gap-8 mb-12 lg:mb-10">
 
-            {/* Bio */}
+            {/* Photo + Stats row */}
+            <div className="flex gap-8 md:flex-col md:gap-6 sm:gap-5">
+
+              {/* Photo */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.97 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                className="relative flex-shrink-0 w-72 xl:w-64 lg:w-56 md:w-full md:max-w-xs md:mx-auto sm:max-w-[240px]"
+              >
+                <div className="relative rounded-2xl overflow-hidden border border-border dark:border-border shadow-2xl">
+                  <Image
+                    src={ProfilePic}
+                    alt="Parth Pidadi"
+                    className="w-full h-auto object-cover"
+                    priority
+                    width={288}
+                    height={360}
+                    sizes="(max-width: 768px) 240px, 288px"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark/40 via-transparent to-transparent" />
+                </div>
+                <div className="absolute -top-2 -left-2 w-5 h-5 border-t-2 border-l-2 border-gold rounded-tl-md" />
+                <div className="absolute -bottom-2 -right-2 w-5 h-5 border-b-2 border-r-2 border-teal rounded-br-md" />
+              </motion.div>
+
+              {/* Stats — vertical column next to photo on desktop, horizontal row below on mobile */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.25 }}
+                className="flex flex-col justify-around gap-6 md:flex-row md:justify-start md:gap-8 sm:gap-6 xs:gap-4"
+              >
+                {stats.map(({ value, suffix, label }) => (
+                  <div key={label} className="flex flex-col">
+                    <span className="font-syne font-black text-5xl xl:text-4xl md:text-4xl sm:text-3xl xs:text-2xl text-gold leading-none">
+                      <AnimatedNumber value={value} suffix={suffix} />
+                    </span>
+                    <p className="font-mono text-[10px] xs:text-[9px] uppercase tracking-widest text-muted mt-2">
+                      {label}
+                    </p>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+
+            {/* Bio text */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -16 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="col-span-4 flex flex-col items-start justify-start xl:col-span-5 md:order-2 md:col-span-8"
+              className="flex flex-col items-start"
             >
               <span className="font-mono text-xs tracking-widest uppercase text-gold mb-4 border border-gold/30 px-3 py-1 rounded-full bg-gold/5">
                 Biography
               </span>
-              <p className="font-lora text-base leading-relaxed dark:text-light/80 text-ink/85 mb-4">
+              <p className="font-lora text-base sm:text-sm leading-relaxed dark:text-light/80 text-ink/85 mb-4">
                 I&apos;m a Data Scientist and ML Engineer currently pursuing my MS in Data Science
-                at Stony Brook University (GPA: 3.74), with a background in Computer Engineering
-                from Savitribai Phule Pune University. My work sits at the intersection of
-                AI systems, data infrastructure, and full-stack engineering.
+                at Stony Brook University, with a background in Computer Engineering. My work
+                sits at the intersection of AI systems, data infrastructure, and full-stack engineering.
               </p>
-              <p className="font-lora text-base leading-relaxed dark:text-light/80 text-ink/85 mb-4">
-                I specialize in production-grade LLM systems and agentic RAG pipelines, building
-                things like DocBrain — a full-stack AI document Q&amp;A platform with LLM tool
-                calling, ChromaDB, and JWT-secured multi-user isolation — and a real-time Log
-                Monitor in Go and Kafka handling 100K+ events per hour.
+              <p className="font-lora text-base sm:text-sm leading-relaxed dark:text-light/80 text-ink/85 mb-4">
+                I specialize in production-grade LLM systems and agentic RAG pipelines — DocBrain,
+                a full-stack AI document Q&amp;A platform with LLM tool calling and JWT-secured
+                multi-user isolation, and a real-time Log Monitor in Go and Kafka handling
+                100K+ events per hour.
               </p>
-              <p className="font-lora text-base leading-relaxed dark:text-light/80 text-ink/85">
+              <p className="font-lora text-base sm:text-sm leading-relaxed dark:text-light/80 text-ink/85">
                 On the data engineering side, I&apos;ve built 10TB+ Spark ETL pipelines on Azure,
                 designed Kafka architectures serving 10K+ concurrent users, and deployed
-                LLM-guided lineage tracing systems for healthcare data workflows. I&apos;m actively
-                seeking full-time roles in Software Engineering, Data Science, or Generative AI
-                starting July 2026.
+                LLM-guided lineage tracing systems for healthcare data workflows.
+                Seeking full-time roles in SWE, Data Science, or Generative AI starting July 2026.
               </p>
 
-              {/* Social links */}
-              <div className="flex gap-4 mt-6">
-                <a
-                  href="https://github.com/Parth-Pidadi"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-mono text-xs tracking-widest uppercase text-muted hover:text-gold dark:hover:text-gold transition-colors gold-link"
-                >
-                  GitHub ↗
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/parthpidadi/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-mono text-xs tracking-widest uppercase text-muted hover:text-gold dark:hover:text-gold transition-colors gold-link"
-                >
-                  LinkedIn ↗
-                </a>
-                <a
-                  href="/Parth_Pidadi_Resume.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-mono text-xs tracking-widest uppercase text-muted hover:text-gold dark:hover:text-gold transition-colors gold-link"
-                >
-                  Resume ↗
-                </a>
-              </div>
-            </motion.div>
-
-            {/* Photo */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.97 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="col-span-3 relative h-max md:order-1 md:col-span-8 xl:col-span-3"
-            >
-              <div className="relative rounded-2xl overflow-hidden border border-border dark:border-border shadow-2xl">
-                <Image
-                  src={ProfilePic}
-                  alt="Parth Pidadi"
-                  className="w-full h-auto object-cover"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 40vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark/40 via-transparent to-transparent" />
-              </div>
-              {/* Decorative corners */}
-              <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-gold rounded-tl-lg" />
-              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-teal rounded-br-lg" />
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="col-span-1 flex flex-col justify-between xl:col-span-8 xl:flex-row xl:items-start md:order-3 gap-6"
-            >
-              {stats.map(({ value, suffix, label }) => (
-                <div key={label} className="flex flex-col xl:items-center">
-                  <span className="font-syne font-extrabold text-5xl md:text-4xl sm:text-3xl text-gold leading-none">
-                    <AnimatedNumber value={value} suffix={suffix} />
-                  </span>
-                  <p className="font-mono text-[11px] uppercase tracking-widest text-muted mt-2 max-w-[120px] xl:text-center">
+              <div className="flex gap-4 mt-5 flex-wrap">
+                {[
+                  { label: "GitHub ↗", href: "https://github.com/Parth-Pidadi" },
+                  { label: "LinkedIn ↗", href: "https://www.linkedin.com/in/parthpidadi/" },
+                  { label: "Resume ↗", href: "/Parth_Pidadi_Resume.pdf" },
+                ].map(({ label, href }) => (
+                  <a key={label} href={href} target="_blank" rel="noreferrer"
+                    className="font-mono text-xs tracking-widest uppercase text-muted hover:text-gold dark:hover:text-gold transition-colors gold-link">
                     {label}
-                  </p>
-                </div>
-              ))}
+                  </a>
+                ))}
+              </div>
             </motion.div>
           </div>
 
-          {/* ─── Skills ─── */}
+          {/* Skills */}
           <Skills />
 
-          {/* ─── Experience ─── */}
+          {/* Experience */}
           <Experience />
 
-          {/* ─── Education ─── */}
+          {/* Education */}
           <Education />
 
         </Layout>
