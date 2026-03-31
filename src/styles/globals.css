@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Custom scrollbar ─── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d10;
+}
+::-webkit-scrollbar-thumb {
+  background: #2e2e3e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e8b84b;
+}
+
+/* ─── Selection ─── */
+::selection {
+  background: #e8b84b;
+  color: #0d0d10;
+}
+
+/* ─── Dot-grid backgrounds ─── */
+.dot-grid-dark {
+  background-image: radial-gradient(rgba(232, 184, 75, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.dot-grid-light {
+  background-image: radial-gradient(rgba(26, 22, 18, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ─── Noise overlay for depth ─── */
+.noise::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+/* ─── Smooth theme transitions ─── */
+*, *::before, *::after {
+  transition-property: background-color, border-color;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}
+
+/* ─── Gold underline link ─── */
+.gold-link {
+  position: relative;
+}
+.gold-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e8b84b;
+  transition: width 0.3s ease;
+}
+.gold-link:hover::after {
+  width: 100%;
+}
+
+/* ─── Skill tag hover glow ─── */
+.skill-tag {
+  transition: all 0.2s ease;
+}
+.skill-tag:hover {
+  box-shadow: 0 0 12px rgba(232, 184, 75, 0.3);
+}
+
+/* ─── Timeline line ─── */
+.timeline-line {
+  background: linear-gradient(to bottom, #e8b84b, transparent);
+}
