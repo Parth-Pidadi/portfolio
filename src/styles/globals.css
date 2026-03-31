@@ -2,46 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── Custom scrollbar ─── */
-::-webkit-scrollbar {
-  width: 5px;
-}
-::-webkit-scrollbar-track {
-  background: #0d0d10;
-}
-::-webkit-scrollbar-thumb {
-  background: #2e2e3e;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #e8b84b;
-}
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #07070e; }
+::-webkit-scrollbar-thumb { background: #1c1c2e; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #e63946; }
 
 /* ─── Selection ─── */
-::selection {
-  background: #e8b84b;
-  color: #0d0d10;
-}
+::selection { background: #e63946; color: #07070e; }
 
-/* ─── Dot-grid backgrounds ─── */
+/* ─── Dot grid ─── */
 .dot-grid-dark {
-  background-image: radial-gradient(rgba(232, 184, 75, 0.12) 1px, transparent 1px);
-  background-size: 28px 28px;
+  background-image: radial-gradient(rgba(230, 57, 70, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 .dot-grid-light {
-  background-image: radial-gradient(rgba(26, 22, 18, 0.07) 1px, transparent 1px);
-  background-size: 28px 28px;
+  background-image: radial-gradient(rgba(26, 22, 24, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
-/* ─── Noise overlay for depth ─── */
-.noise::after {
+/* ─── Ambient crimson glow at top-left ─── */
+.hero-glow::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  top: -10%;
+  left: -5%;
+  width: 50%;
+  height: 70%;
+  background: radial-gradient(ellipse at top left, rgba(230, 57, 70, 0.06) 0%, transparent 65%);
   pointer-events: none;
   z-index: 0;
-  opacity: 0.4;
 }
 
 /* ─── Smooth theme transitions ─── */
@@ -51,33 +41,23 @@
   transition-timing-function: ease;
 }
 
-/* ─── Gold underline link ─── */
-.gold-link {
-  position: relative;
-}
+/* ─── Crimson underline link ─── */
 .gold-link::after {
   content: "";
   position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #e8b84b;
+  bottom: -2px; left: 0;
+  width: 0; height: 2px;
+  background: #e63946;
   transition: width 0.3s ease;
 }
-.gold-link:hover::after {
-  width: 100%;
-}
+.gold-link:hover::after { width: 100%; }
+.gold-link { position: relative; }
 
-/* ─── Skill tag hover glow ─── */
-.skill-tag {
-  transition: all 0.2s ease;
-}
-.skill-tag:hover {
-  box-shadow: 0 0 12px rgba(232, 184, 75, 0.3);
-}
+/* ─── Skill tag hover ─── */
+.skill-tag { transition: all 0.2s ease; }
+.skill-tag:hover { box-shadow: 0 0 12px rgba(230, 57, 70, 0.25); }
 
-/* ─── Timeline line ─── */
-.timeline-line {
-  background: linear-gradient(to bottom, #e8b84b, transparent);
+/* ─── Photo panel full-height clip ─── */
+.photo-panel {
+  clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
 }

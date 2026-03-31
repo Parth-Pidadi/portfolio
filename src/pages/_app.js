@@ -1,26 +1,29 @@
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
 import "@/styles/globals.css";
-import { Syne, Lora, JetBrains_Mono } from "next/font/google";
+import { Big_Shoulders_Display, Fraunces, Fira_Code } from "next/font/google";
 import Head from "next/head";
 
-const syne = Syne({
+// Ultra-condensed display — tall, dramatic, technical
+const bigShoulders = Big_Shoulders_Display({
   subsets: ["latin"],
-  variable: "--font-syne",
-  weight: ["400", "600", "700", "800"],
+  variable: "--font-display",
+  weight: ["700", "800", "900"],
 });
 
-const lora = Lora({
+// Wonky optical serif — elegant, unexpected for tech, reads beautifully
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-lora",
-  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
+  weight: ["300", "400", "500", "600"],
   style: ["normal", "italic"],
 });
 
-const jetbrainsMono = JetBrains_Mono({
+// Clean monospace for code/tags
+const firaCode = Fira_Code({
   subsets: ["latin"],
   variable: "--font-mono",
-  weight: ["400", "500", "600"],
+  weight: ["400", "500"],
 });
 
 export default function App({ Component, pageProps }) {
@@ -29,10 +32,10 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <meta name="theme-color" content="#0d0d10" />
+        <meta name="theme-color" content="#07070e" />
       </Head>
       <main
-        className={`${syne.variable} ${lora.variable} ${jetbrainsMono.variable} font-lora bg-light dark:bg-dark min-h-screen`}
+        className={`${bigShoulders.variable} ${fraunces.variable} ${firaCode.variable} font-lora bg-light dark:bg-dark min-h-screen`}
       >
         <Navbar />
         <Component {...pageProps} />

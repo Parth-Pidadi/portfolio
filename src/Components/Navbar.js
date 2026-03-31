@@ -11,7 +11,7 @@ const CustomLink = ({ href, title, className = "" }) => {
   return (
     <Link
       href={href}
-      className={`${className} relative group font-syne font-semibold text-xs tracking-[0.15em] uppercase text-ink dark:text-light hover:text-gold dark:hover:text-gold transition-colors duration-200`}
+      className={`${className} relative group font-lora font-semibold text-sm tracking-[0.1em] text-ink dark:text-light hover:text-gold dark:hover:text-gold transition-colors duration-200`}
     >
       {title}
       <span
@@ -35,7 +35,7 @@ const CustomMobileLink = ({ href, title, toggle }) => {
   return (
     <button
       onClick={handleClick}
-      className="relative group font-syne font-bold text-2xl tracking-widest uppercase text-light dark:text-ink my-3"
+      className="relative group font-syne font-black text-3xl tracking-tight uppercase text-light dark:text-ink my-3"
     >
       {title}
       <span
@@ -84,7 +84,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link
           href="/"
-          className="font-syne font-extrabold text-xl tracking-tight text-ink dark:text-light select-none"
+          className="font-syne font-black text-2xl tracking-tight text-ink dark:text-light select-none"
         >
           PP<span className="text-gold">.</span>
         </Link>

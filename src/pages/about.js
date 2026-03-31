@@ -31,9 +31,8 @@ const AnimatedNumber = ({ value, suffix = "" }) => {
 };
 
 const stats = [
-  { value: 2, suffix: "+", label: "Years Industry Experience" },
+  { value: 2, suffix: "+", label: "Years Experience" },
   { value: 10, suffix: "+", label: "Projects Shipped" },
-  { value: 374, suffix: "", label: "MS GPA · 3.74 / 4.00", display: "3.74" },
   { value: 50, suffix: "+", label: "Technologies" },
 ];
 
@@ -156,10 +155,10 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="col-span-1 flex flex-col justify-between xl:col-span-8 xl:flex-row xl:items-start md:order-3 gap-6"
             >
-              {stats.map(({ value, suffix, label, display }) => (
+              {stats.map(({ value, suffix, label }) => (
                 <div key={label} className="flex flex-col xl:items-center">
                   <span className="font-syne font-extrabold text-5xl md:text-4xl sm:text-3xl text-gold leading-none">
-                    {display ? display : <AnimatedNumber value={value} suffix={suffix} />}
+                    <AnimatedNumber value={value} suffix={suffix} />
                   </span>
                   <p className="font-mono text-[11px] uppercase tracking-widest text-muted mt-2 max-w-[120px] xl:text-center">
                     {label}
