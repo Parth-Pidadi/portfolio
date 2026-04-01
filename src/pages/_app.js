@@ -35,7 +35,7 @@ export default function App({ Component, pageProps }) {
         <meta name="theme-color" content="#07070e" />
       </Head>
       <main
-        className={`${bigShoulders.variable} ${fraunces.variable} ${firaCode.variable} font-lora bg-light dark:bg-dark min-h-screen`}
+        className={`${bigShoulders.variable} ${fraunces.variable} ${firaCode.variable} font-lora bg-light dark:bg-dark flex flex-col min-h-screen`}
       >
         <Navbar />
         <Component {...pageProps} />

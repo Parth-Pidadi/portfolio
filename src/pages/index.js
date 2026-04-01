@@ -34,7 +34,7 @@ export default function Home() {
       <Transitions />
 
       {/* ─── MOBILE: stacked layout ─── */}
-      <div className="hidden lg:flex flex-col dark:text-light text-ink min-h-[calc(100vh-72px)]">
+      <div className="hidden lg:flex flex-col dark:text-light text-ink flex-1">
         {/* Photo banner at top */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -133,7 +133,7 @@ export default function Home() {
       </div>
 
       {/* ─── DESKTOP: side-panel layout ─── */}
-      <main className="lg:hidden relative w-full min-h-[calc(100vh-72px)] flex dark:text-light text-ink overflow-hidden hero-glow">
+      <main className="lg:hidden relative w-full flex-1 flex dark:text-light text-ink overflow-hidden hero-glow">
         {/* Dot grid */}
         <div className="absolute inset-0 dot-grid-dark dark:block hidden pointer-events-none" />
         <div className="absolute inset-0 dot-grid-light dark:hidden block pointer-events-none" />
@@ -144,9 +144,9 @@ export default function Home() {
           <motion.div {...fadeUp(0.1)} className="mb-2">
             <h1
               className="font-syne font-black leading-[0.85] tracking-tight dark:text-light text-ink select-none"
-              style={{ fontSize: "clamp(3.5rem, 7vw, 7rem)" }}
+              style={{ fontSize: "clamp(3rem, 5.5vw, 5.5rem)" }}
             >
-              PARTH<br />PIDADI<span className="text-gold">.</span>
+              PARTH PIDADI<span className="text-gold">.</span>
             </h1>
           </motion.div>
 
