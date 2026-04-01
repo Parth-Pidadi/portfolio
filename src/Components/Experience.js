@@ -30,9 +30,10 @@ const experiences = [
     time: "June 2023 – May 2024",
     place: "Pune, India",
     bullets: [
-      "Delivered $500K+ annual revenue impact by building a hybrid recommendation engine (collaborative + content-based ML) that increased engagement 25% and retention 30%.",
-      "Optimized a 10TB Spark ETL pipeline on Azure — reducing processing time from 6 hours to 45 minutes using adaptive partitioning, caching, and join optimization.",
-      "Reduced API latency 20% under peak traffic by redesigning Kafka consumer architecture with Redis-based cache invalidation; containerized with Docker/Kubernetes and automated via GitHub Actions CI/CD.",
+      "Designed and developed scalable backend services and APIs for a real-time recommendation platform, achieving sub-50ms response times and increasing user engagement by 25%.",
+      "Built and owned distributed data processing pipelines handling 10TB+ of data using Apache Spark, Kafka, and Hadoop on Azure, ensuring fault tolerance, scalability, and reliable data delivery in production.",
+      "Implemented event-driven microservices with Kafka and Redis for real-time updates, reducing system latency by 20%; containerized services with Docker and Kubernetes and automated deployments via GitHub Actions CI/CD.",
+      "Conducted statistical A/B testing to evaluate recommendation algorithm changes, improving model accuracy by 15% and contributing to a 30% increase in user retention.",
     ],
   },
   {
@@ -68,7 +69,7 @@ const Details = ({ company, position, time, place, bullets }) => {
         <p className="font-syne font-semibold text-base text-gold mt-0.5 xs:text-sm">
           {position}
         </p>
-        <span className="font-mono text-xs tracking-widest uppercase text-muted mt-1 block xs:text-[10px]">
+        <span className="font-mono text-sm tracking-widest uppercase text-muted mt-1 block xs:text-xs">
           {time} · {place}
         </span>
         <ul className="mt-3 space-y-2">

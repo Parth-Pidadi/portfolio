@@ -107,7 +107,7 @@ const Skills = () => {
               {cat.skills.map((skill) => (
                 <span
                   key={skill}
-                  className={`skill-tag font-mono text-[11px] tracking-wide px-3 py-1.5 rounded-full border ${cat.color} cursor-default`}
+                  className={`skill-tag font-mono text-sm tracking-wide px-3 py-1.5 rounded-full border ${cat.color} cursor-default`}
                 >
                   {skill}
                 </span>

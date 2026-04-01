@@ -42,7 +42,7 @@ const Details = ({ degree, institution, time, place, grade, coursework }) => {
         <p className="font-lora italic text-base text-gold mt-0.5 xs:text-sm">
           {degree}
         </p>
-        <span className="font-mono text-xs tracking-widest uppercase text-muted mt-1 block xs:text-[10px]">
+        <span className="font-mono text-sm tracking-widest uppercase text-muted mt-1 block xs:text-xs">
           {time} · {place}
         </span>
         <p className="font-syne font-semibold text-sm dark:text-teal text-teal-light mt-2">
