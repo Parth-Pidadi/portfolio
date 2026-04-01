@@ -4,8 +4,8 @@ import { CircularTextFullStack, CircularTextML } from "./Icons";
 
 const HireMe = () => {
   return (
-    <div className="fixed left-4 z-10 bottom-6 flex items-center justify-center overflow-hidden pointer-events-none lg:right-[-75vw] lg:top-[-83vh] ">
-      <div className="w-48 h-48 flex items-center justify-center relative md:w-24">
+    <div className="fixed left-4 z-10 bottom-6 flex items-center justify-center overflow-hidden pointer-events-none">
+      <div className="w-36 h-36 flex items-center justify-center relative md:w-24 sm:w-20">
         <CircularTextML className="fill-dark animate-spin-slow dark:fill-light" />
         <Link
           // href={"mailto:pidadiparth@gmail.com"}
