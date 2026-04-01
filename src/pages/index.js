@@ -14,10 +14,11 @@ const fadeUp = (delay = 0) => ({
 const tags = ["LLMs & RAG", "Distributed Systems", "Data Engineering", "Full-Stack"];
 
 const metrics = [
-  { value: "1.5M+", label: "Samples Processed" },
-  { value: "$500K+", label: "Revenue Impact" },
-  { value: "3×", label: "Faster Analysis" },
-  { value: "10+", label: "Projects Shipped" },
+  { value: "20", label: "Research Citations" },
+  { value: "3+", label: "Published Research" },
+  { value: "6+", label: "Years Coding" },
+  { value: "4", label: "Cloud Platforms" },
+  { value: "∞", label: "Lines Debugged" },
 ];
 
 export default function Home() {
@@ -119,7 +120,7 @@ export default function Home() {
             </motion.div>
 
             {/* Metrics */}
-            <motion.div {...fadeUp(0.56)} className="grid grid-cols-4 xs:grid-cols-2 gap-4 pt-5 border-t border-border dark:border-border">
+            <motion.div {...fadeUp(0.56)} className="grid grid-cols-3 xs:grid-cols-2 gap-4 pt-5 border-t border-border dark:border-border">
               {metrics.map(({ value, label }) => (
                 <div key={label} className="flex flex-col">
                   <span className="font-syne font-black text-xl xs:text-lg leading-none dark:text-light text-ink">{value}</span>
@@ -204,7 +205,7 @@ export default function Home() {
           </motion.div>
 
           {/* Metrics */}
-          <motion.div {...fadeUp(0.62)} className="flex items-center gap-10 pt-6 border-t border-border dark:border-border">
+          <motion.div {...fadeUp(0.62)} className="flex items-center gap-8 xl:gap-6 pt-6 border-t border-border dark:border-border">
             {metrics.map(({ value, label }) => (
               <div key={label} className="flex flex-col">
                 <span className="font-syne font-black text-2xl leading-none dark:text-light text-ink">{value}</span>
