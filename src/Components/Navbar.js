@@ -107,7 +107,7 @@ const Navbar = () => {
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-5 text-ink dark:text-light hover:text-gold dark:hover:text-gold transition-colors"
+            className="w-10 text-ink dark:text-light hover:text-gold dark:hover:text-gold transition-colors"
           >
             <GithubIcon />
           </motion.a>
@@ -116,12 +116,12 @@ const Navbar = () => {
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-5 text-ink dark:text-light hover:text-gold dark:hover:text-gold transition-colors"
+            className="w-10 text-ink dark:text-light hover:text-gold dark:hover:text-gold transition-colors"
           >
             <LinkedInIcon />
           </motion.a>
           <button
-            className="w-5 h-5 flex items-center justify-center text-ink dark:text-light hover:text-gold dark:hover:text-gold transition-colors ml-1"
+            className="w-10 h-10 flex items-center justify-center text-ink dark:text-light hover:text-gold dark:hover:text-gold transition-colors ml-1"
             onClick={() => setMode(mode === "dark" ? "light" : "dark")}
             aria-label="Toggle theme"
           >
