@@ -140,19 +140,11 @@ export default function Home() {
 
         {/* Left: Text */}
         <div className="relative z-10 flex-1 flex flex-col justify-center px-16 xl:px-12 py-4 max-w-[62%] xl:max-w-[64%]">
-          {/* Badge */}
-          <motion.div {...fadeUp(0.05)} className="mb-3">
-            <span className="inline-flex items-center gap-2 font-mono text-xs tracking-[0.18em] uppercase text-ink/70 dark:text-light/70 border border-border dark:border-border rounded-full px-4 py-1.5 bg-surface/40 backdrop-blur-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal inline-block animate-pulse" />
-              MS DS @ Stony Brook · Seeking Full-time&apos;26
-            </span>
-          </motion.div>
-
           {/* Name */}
-          <motion.div {...fadeUp(0.15)} className="mb-2">
+          <motion.div {...fadeUp(0.1)} className="mb-2">
             <h1
               className="font-syne font-black leading-[0.85] tracking-tight dark:text-light text-ink select-none"
-              style={{ fontSize: "clamp(4rem, 8.5vw, 8.5rem)" }}
+              style={{ fontSize: "clamp(3.5rem, 7vw, 7rem)" }}
             >
               PARTH<br />PIDADI<span className="text-gold">.</span>
             </h1>
@@ -164,10 +156,8 @@ export default function Home() {
           </motion.p>
 
           {/* Bio */}
-          <motion.p {...fadeUp(0.38)} className="font-lora text-lg leading-relaxed text-ink/75 dark:text-light/75 max-w-lg mb-4">
-            Building production LLM systems, Kafka-based distributed backends,
-            and end-to-end data pipelines. Currently at SUNY Research Foundation,
-            pursuing MS at Stony Brook.
+          <motion.p {...fadeUp(0.38)} className="font-lora text-base leading-relaxed text-ink/75 dark:text-light/75 max-w-lg mb-4">
+            Building production LLM systems, distributed data pipelines, and end-to-end ML. Research Assistant at SUNY · MS @ Stony Brook.
           </motion.p>
 
           {/* Tags */}
