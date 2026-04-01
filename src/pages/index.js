@@ -123,7 +123,7 @@ export default function Home() {
             <motion.div {...fadeUp(0.56)} className="grid grid-cols-3 xs:grid-cols-2 gap-4 pt-5 border-t border-border dark:border-border">
               {metrics.map(({ value, label }) => (
                 <div key={label} className="flex flex-col">
-                  <span className="font-syne font-black text-xl xs:text-lg leading-none dark:text-light text-ink">{value}</span>
+                  <span className="font-syne font-black text-2xl xs:text-xl leading-none dark:text-light text-ink">{value}</span>
                   <span className="font-mono text-[9px] uppercase tracking-widest text-muted mt-1">{label}</span>
                 </div>
               ))}
@@ -208,7 +208,7 @@ export default function Home() {
           <motion.div {...fadeUp(0.62)} className="flex items-center gap-8 xl:gap-6 pt-6 border-t border-border dark:border-border">
             {metrics.map(({ value, label }) => (
               <div key={label} className="flex flex-col">
-                <span className="font-syne font-black text-2xl leading-none dark:text-light text-ink">{value}</span>
+                <span className="font-syne font-black text-4xl xl:text-3xl leading-none dark:text-light text-ink">{value}</span>
                 <span className="font-mono text-[10px] uppercase tracking-widest text-muted mt-1">{label}</span>
               </div>
             ))}
