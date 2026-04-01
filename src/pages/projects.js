@@ -190,15 +190,18 @@ const FeaturedCard = ({ title, summary, stack, github, link, category, metrics, 
             <span className={`font-mono text-xs tracking-[0.15em] uppercase px-3 py-1 rounded-full border ${cat.color} flex-shrink-0`}>
               {cat.label}
             </span>
-            <div className="flex gap-3">
+            <div className="flex gap-2">
               {github && github !== "#" && (
-                <a href={github} target="_blank" rel="noreferrer" className="w-10 text-muted hover:text-gold dark:hover:text-gold transition-colors">
-                  <GithubIcon />
+                <a href={github} target="_blank" rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border dark:border-border font-syne font-bold text-xs tracking-wide text-ink dark:text-light hover:border-gold hover:text-gold dark:hover:text-gold transition-colors duration-200">
+                  <span className="w-4 flex-shrink-0"><GithubIcon /></span>
+                  GitHub
                 </a>
               )}
               {link && link !== "#" && link !== github && (
-                <a href={link} target="_blank" rel="noreferrer" className="text-muted hover:text-gold dark:hover:text-gold transition-colors">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <a href={link} target="_blank" rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border dark:border-border font-syne font-bold text-xs tracking-wide text-ink dark:text-light hover:border-teal hover:text-teal dark:hover:text-teal transition-colors duration-200">
+                  Live ↗
                 </a>
               )}
             </div>
@@ -273,15 +276,18 @@ const SmallCard = ({ title, summary, stack, github, link, category, metrics, img
           <span className={`font-mono text-xs tracking-[0.12em] uppercase px-2.5 py-1 rounded-full border ${cat.color}`}>
             {cat.label}
           </span>
-          <div className="flex gap-2.5">
+          <div className="flex gap-2">
             {github && github !== "#" && (
-              <a href={github} target="_blank" rel="noreferrer" className="w-5 text-muted hover:text-gold dark:hover:text-gold transition-colors">
-                <GithubIcon />
+              <a href={github} target="_blank" rel="noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border dark:border-border font-syne font-bold text-xs tracking-wide text-ink dark:text-light hover:border-gold hover:text-gold dark:hover:text-gold transition-colors duration-200">
+                <span className="w-4 flex-shrink-0"><GithubIcon /></span>
+                GitHub
               </a>
             )}
             {link && link !== "#" && link !== github && (
-              <a href={link} target="_blank" rel="noreferrer" className="text-muted hover:text-gold dark:hover:text-gold transition-colors">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <a href={link} target="_blank" rel="noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border dark:border-border font-syne font-bold text-xs tracking-wide text-ink dark:text-light hover:border-teal hover:text-teal dark:hover:text-teal transition-colors duration-200">
+                Live ↗
               </a>
             )}
           </div>
