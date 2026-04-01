@@ -11,7 +11,7 @@ const CustomLink = ({ href, title, className = "" }) => {
   return (
     <Link
       href={href}
-      className={`${className} relative group font-lora font-semibold text-sm tracking-[0.1em] text-ink dark:text-light hover:text-gold dark:hover:text-gold transition-colors duration-200`}
+      className={`${className} relative group font-lora font-semibold text-base tracking-[0.1em] text-ink dark:text-light hover:text-gold dark:hover:text-gold transition-colors duration-200`}
     >
       {title}
       <span

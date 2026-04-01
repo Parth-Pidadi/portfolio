@@ -14,10 +14,10 @@ const fadeUp = (delay = 0) => ({
 const tags = ["LLMs & RAG", "Distributed Systems", "Data Engineering", "Full-Stack"];
 
 const metrics = [
-  { value: "10TB+", label: "Spark ETL" },
-  { value: "100K+", label: "Kafka / hr" },
-  { value: "<2s", label: "RAG latency" },
-  { value: "10+", label: "Projects" },
+  { value: "5+", label: "LLM Systems" },
+  { value: "18%", label: "Accuracy Gain" },
+  { value: "3×", label: "Faster Pipelines" },
+  { value: "50+", label: "Technologies" },
 ];
 
 export default function Home() {
@@ -62,7 +62,7 @@ export default function Home() {
           <div className="relative z-10">
             {/* Badge */}
             <motion.div {...fadeUp(0.1)} className="mb-5">
-              <span className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.15em] uppercase text-muted dark:text-muted border border-border dark:border-border rounded-full px-3 py-1.5">
+              <span className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.15em] uppercase text-ink/70 dark:text-light/70 border border-border dark:border-border rounded-full px-3 py-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal inline-block animate-pulse flex-shrink-0" />
                 MS DS @ Stony Brook · Seeking FT&apos;26
               </span>
@@ -72,7 +72,7 @@ export default function Home() {
             <motion.h1
               {...fadeUp(0.2)}
               className="font-syne font-black leading-[0.88] dark:text-light text-ink mb-3 select-none"
-              style={{ fontSize: "clamp(3.5rem, 14vw, 5.5rem)" }}
+              style={{ fontSize: "clamp(4rem, 15vw, 6.5rem)" }}
             >
               PARTH<br />PIDADI<span className="text-gold">.</span>
             </motion.h1>
@@ -83,7 +83,7 @@ export default function Home() {
             </motion.p>
 
             {/* Bio */}
-            <motion.p {...fadeUp(0.38)} className="font-lora text-sm leading-relaxed text-muted dark:text-muted mb-5 max-w-sm">
+            <motion.p {...fadeUp(0.38)} className="font-lora text-sm leading-relaxed text-ink/75 dark:text-light/75 mb-5 max-w-sm">
               Building production LLM systems, Kafka-based distributed backends, and end-to-end
               data pipelines. Currently at SUNY Research Foundation, MS at Stony Brook.
             </motion.p>
@@ -91,7 +91,7 @@ export default function Home() {
             {/* Tags */}
             <motion.div {...fadeUp(0.44)} className="flex flex-wrap gap-1.5 mb-6">
               {tags.map((tag) => (
-                <span key={tag} className="font-mono text-[9px] tracking-[0.12em] uppercase px-2.5 py-1 rounded-full border border-border dark:border-border text-muted dark:text-muted">
+                <span key={tag} className="font-mono text-[9px] tracking-[0.12em] uppercase px-2.5 py-1 rounded-full border border-border dark:border-border text-ink/65 dark:text-light/65">
                   {tag}
                 </span>
               ))}
@@ -138,10 +138,10 @@ export default function Home() {
         <div className="absolute inset-0 dot-grid-light dark:hidden block pointer-events-none" />
 
         {/* Left: Text */}
-        <div className="relative z-10 flex-1 flex flex-col justify-center px-20 xl:px-14 py-12 max-w-[58%] xl:max-w-[60%]">
+        <div className="relative z-10 flex-1 flex flex-col justify-center px-16 xl:px-12 py-12 max-w-[62%] xl:max-w-[64%]">
           {/* Badge */}
           <motion.div {...fadeUp(0.05)} className="mb-7">
-            <span className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.18em] uppercase text-muted dark:text-muted border border-border dark:border-border rounded-full px-4 py-1.5 bg-surface/40 backdrop-blur-sm">
+            <span className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.18em] uppercase text-ink/70 dark:text-light/70 border border-border dark:border-border rounded-full px-4 py-1.5 bg-surface/40 backdrop-blur-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-teal inline-block animate-pulse" />
               MS DS @ Stony Brook · Seeking Full-time&apos;26
             </span>
@@ -150,8 +150,8 @@ export default function Home() {
           {/* Name */}
           <motion.div {...fadeUp(0.15)} className="mb-4">
             <h1
-              className="font-syne font-black leading-[0.88] tracking-tight dark:text-light text-ink select-none"
-              style={{ fontSize: "clamp(4.8rem, 10vw, 9.5rem)" }}
+              className="font-syne font-black leading-[0.85] tracking-tight dark:text-light text-ink select-none"
+              style={{ fontSize: "clamp(5.5rem, 11vw, 11rem)" }}
             >
               PARTH<br />PIDADI<span className="text-gold">.</span>
             </h1>
@@ -163,7 +163,7 @@ export default function Home() {
           </motion.p>
 
           {/* Bio */}
-          <motion.p {...fadeUp(0.38)} className="font-lora text-[15px] leading-relaxed text-muted dark:text-muted max-w-md mb-6">
+          <motion.p {...fadeUp(0.38)} className="font-lora text-[15px] leading-relaxed text-ink/75 dark:text-light/75 max-w-lg mb-6">
             Building production LLM systems, Kafka-based distributed backends,
             and end-to-end data pipelines. Currently at SUNY Research Foundation,
             pursuing MS at Stony Brook.
@@ -173,7 +173,7 @@ export default function Home() {
           <motion.div {...fadeUp(0.45)} className="flex flex-wrap gap-2 mb-8">
             {tags.map((tag) => (
               <span key={tag}
-                className="font-mono text-[10px] tracking-[0.15em] uppercase px-3 py-1.5 rounded-full border border-border dark:border-border text-muted dark:text-muted hover:border-gold dark:hover:border-gold hover:text-gold dark:hover:text-gold transition-colors duration-200">
+                className="font-mono text-[10px] tracking-[0.15em] uppercase px-3 py-1.5 rounded-full border border-border dark:border-border text-ink/65 dark:text-light/65 hover:border-gold dark:hover:border-gold hover:text-gold dark:hover:text-gold transition-colors duration-200">
                 {tag}
               </span>
             ))}
@@ -219,7 +219,7 @@ export default function Home() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-          className="relative w-[42%] xl:w-[40%] flex-shrink-0 photo-panel overflow-hidden"
+          className="relative w-[38%] xl:w-[36%] flex-shrink-0 photo-panel overflow-hidden"
         >
           <Image src={ProfilePic} alt="Parth Pidadi" fill className="object-cover object-center" priority sizes="42vw" />
           <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r dark:from-dark from-light to-transparent pointer-events-none" />
