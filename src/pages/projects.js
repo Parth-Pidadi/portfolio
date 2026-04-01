@@ -192,7 +192,7 @@ const FeaturedCard = ({ title, summary, stack, github, link, category, metrics, 
             </span>
             <div className="flex gap-3">
               {github && github !== "#" && (
-                <a href={github} target="_blank" rel="noreferrer" className="w-5 text-muted hover:text-gold dark:hover:text-gold transition-colors">
+                <a href={github} target="_blank" rel="noreferrer" className="w-10 text-muted hover:text-gold dark:hover:text-gold transition-colors">
                   <GithubIcon />
                 </a>
               )}
