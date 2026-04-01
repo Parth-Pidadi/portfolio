@@ -186,25 +186,10 @@ const FeaturedCard = ({ title, summary, stack, github, link, category, metrics, 
 
         {/* Content */}
         <div className="p-8 lg:p-6 sm:p-4 flex flex-col">
-          <div className="flex items-start justify-between gap-3 mb-3">
-            <span className={`font-mono text-xs tracking-[0.15em] uppercase px-3 py-1 rounded-full border ${cat.color} flex-shrink-0`}>
+          <div className="mb-3">
+            <span className={`font-mono text-xs tracking-[0.15em] uppercase px-3 py-1 rounded-full border ${cat.color}`}>
               {cat.label}
             </span>
-            <div className="flex gap-2">
-              {github && github !== "#" && (
-                <a href={github} target="_blank" rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border dark:border-border font-syne font-bold text-xs tracking-wide text-ink dark:text-light hover:border-gold hover:text-gold dark:hover:text-gold transition-colors duration-200">
-                  <span className="w-4 flex-shrink-0"><GithubIcon /></span>
-                  GitHub
-                </a>
-              )}
-              {link && link !== "#" && link !== github && (
-                <a href={link} target="_blank" rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border dark:border-border font-syne font-bold text-xs tracking-wide text-ink dark:text-light hover:border-teal hover:text-teal dark:hover:text-teal transition-colors duration-200">
-                  Live ↗
-                </a>
-              )}
-            </div>
           </div>
 
           <h2 className="font-syne font-extrabold text-2xl sm:text-xl dark:text-light text-ink mb-3 leading-tight">
@@ -226,12 +211,29 @@ const FeaturedCard = ({ title, summary, stack, github, link, category, metrics, 
           )}
 
           {/* Stack */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 mb-5">
             {stack.map((s) => (
               <span key={s} className="font-mono text-xs tracking-wide px-2.5 py-1 rounded border border-border dark:border-border text-ink/65 dark:text-light/65">
                 {s}
               </span>
             ))}
+          </div>
+
+          {/* Buttons */}
+          <div className="flex gap-2">
+            {github && github !== "#" && (
+              <a href={github} target="_blank" rel="noreferrer"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg border border-border dark:border-border font-syne font-bold text-base tracking-wide text-ink dark:text-light hover:border-gold hover:text-gold dark:hover:text-gold transition-colors duration-200">
+                <span className="w-6 flex-shrink-0"><GithubIcon /></span>
+                GitHub
+              </a>
+            )}
+            {link && link !== "#" && link !== github && (
+              <a href={link} target="_blank" rel="noreferrer"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg border border-border dark:border-border font-syne font-bold text-base tracking-wide text-ink dark:text-light hover:border-teal hover:text-teal dark:hover:text-teal transition-colors duration-200">
+                Live ↗
+              </a>
+            )}
           </div>
         </div>
       </div>
