@@ -279,8 +279,8 @@ const SmallCard = ({ title, summary, stack, github, link, category, metrics, img
           <div className="flex gap-2">
             {github && github !== "#" && (
               <a href={github} target="_blank" rel="noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border dark:border-border font-syne font-bold text-sm tracking-wide text-ink dark:text-light hover:border-gold hover:text-gold dark:hover:text-gold transition-colors duration-200">
-                <span className="w-5 flex-shrink-0"><GithubIcon /></span>
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg border border-border dark:border-border font-syne font-bold text-base tracking-wide text-ink dark:text-light hover:border-gold hover:text-gold dark:hover:text-gold transition-colors duration-200">
+                <span className="w-6 flex-shrink-0"><GithubIcon /></span>
                 GitHub
               </a>
             )}
