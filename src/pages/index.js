@@ -14,10 +14,10 @@ const fadeUp = (delay = 0) => ({
 const tags = ["LLMs & RAG", "Distributed Systems", "Data Engineering", "Full-Stack"];
 
 const metrics = [
-  { value: "5+", label: "LLM Systems" },
-  { value: "18%", label: "Accuracy Gain" },
-  { value: "3×", label: "Faster Pipelines" },
-  { value: "50+", label: "Technologies" },
+  { value: "1.5M+", label: "Samples Processed" },
+  { value: "$500K+", label: "Revenue Impact" },
+  { value: "3×", label: "Faster Analysis" },
+  { value: "10+", label: "Projects Shipped" },
 ];
 
 export default function Home() {
