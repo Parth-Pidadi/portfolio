@@ -142,7 +142,7 @@ export default function Home() {
         <div className="relative z-10 flex-1 flex flex-col justify-center px-16 xl:px-12 py-12 max-w-[62%] xl:max-w-[64%]">
           {/* Badge */}
           <motion.div {...fadeUp(0.05)} className="mb-7">
-            <span className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.18em] uppercase text-ink/70 dark:text-light/70 border border-border dark:border-border rounded-full px-4 py-1.5 bg-surface/40 backdrop-blur-sm">
+            <span className="inline-flex items-center gap-2 font-mono text-xs tracking-[0.18em] uppercase text-ink/70 dark:text-light/70 border border-border dark:border-border rounded-full px-4 py-1.5 bg-surface/40 backdrop-blur-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-teal inline-block animate-pulse" />
               MS DS @ Stony Brook · Seeking Full-time&apos;26
             </span>
@@ -159,12 +159,12 @@ export default function Home() {
           </motion.div>
 
           {/* Role */}
-          <motion.p {...fadeUp(0.28)} className="font-syne font-bold text-base tracking-[0.2em] uppercase text-gold mb-5">
+          <motion.p {...fadeUp(0.28)} className="font-syne font-bold text-xl tracking-[0.2em] uppercase text-gold mb-5">
             Data Scientist & ML Engineer
           </motion.p>
 
           {/* Bio */}
-          <motion.p {...fadeUp(0.38)} className="font-lora text-[15px] leading-relaxed text-ink/75 dark:text-light/75 max-w-lg mb-6">
+          <motion.p {...fadeUp(0.38)} className="font-lora text-lg leading-relaxed text-ink/75 dark:text-light/75 max-w-lg mb-6">
             Building production LLM systems, Kafka-based distributed backends,
             and end-to-end data pipelines. Currently at SUNY Research Foundation,
             pursuing MS at Stony Brook.
@@ -174,7 +174,7 @@ export default function Home() {
           <motion.div {...fadeUp(0.45)} className="flex flex-wrap gap-2 mb-8">
             {tags.map((tag) => (
               <span key={tag}
-                className="font-mono text-[10px] tracking-[0.15em] uppercase px-3 py-1.5 rounded-full border border-border dark:border-border text-ink/65 dark:text-light/65 hover:border-gold dark:hover:border-gold hover:text-gold dark:hover:text-gold transition-colors duration-200">
+                className="font-mono text-xs tracking-[0.15em] uppercase px-3 py-1.5 rounded-full border border-border dark:border-border text-ink/65 dark:text-light/65 hover:border-gold dark:hover:border-gold hover:text-gold dark:hover:text-gold transition-colors duration-200">
                 {tag}
               </span>
             ))}
@@ -183,23 +183,23 @@ export default function Home() {
           {/* CTAs */}
           <motion.div {...fadeUp(0.52)} className="flex flex-wrap gap-3 mb-12">
             <Link href="/Parth_Pidadi_Resume.pdf" target="_blank"
-              className="inline-flex items-center gap-2 px-7 py-2.5 rounded-lg bg-gold text-light font-syne font-bold text-sm tracking-[0.1em] uppercase hover:bg-gold-dim transition-colors duration-200 shadow-lg shadow-gold/20">
+              className="inline-flex items-center gap-2 px-7 py-2.5 rounded-lg bg-gold text-light font-syne font-bold text-base tracking-[0.1em] uppercase hover:bg-gold-dim transition-colors duration-200 shadow-lg shadow-gold/20">
               Resume
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
               </svg>
             </Link>
             <Link href="/projects"
-              className="inline-flex items-center gap-2 px-7 py-2.5 rounded-lg border border-border dark:border-border font-syne font-bold text-sm tracking-[0.1em] uppercase hover:border-gold hover:text-gold dark:hover:text-gold transition-colors duration-200">
+              className="inline-flex items-center gap-2 px-7 py-2.5 rounded-lg border border-border dark:border-border font-syne font-bold text-base tracking-[0.1em] uppercase hover:border-gold hover:text-gold dark:hover:text-gold transition-colors duration-200">
               Projects
             </Link>
             <Link href="/about"
-              className="inline-flex items-center gap-2 px-7 py-2.5 rounded-lg border border-border dark:border-border font-syne font-bold text-sm tracking-[0.1em] uppercase hover:border-teal hover:text-teal dark:hover:text-teal transition-colors duration-200">
+              className="inline-flex items-center gap-2 px-7 py-2.5 rounded-lg border border-border dark:border-border font-syne font-bold text-base tracking-[0.1em] uppercase hover:border-teal hover:text-teal dark:hover:text-teal transition-colors duration-200">
               About
             </Link>
             <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=pidadiparth@gmail.com"
               target="_blank" rel="noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-2.5 rounded-lg border border-border dark:border-border font-syne font-bold text-sm tracking-[0.1em] uppercase hover:border-teal hover:text-teal dark:hover:text-teal transition-colors duration-200">
+              className="inline-flex items-center gap-2 px-7 py-2.5 rounded-lg border border-border dark:border-border font-syne font-bold text-base tracking-[0.1em] uppercase hover:border-teal hover:text-teal dark:hover:text-teal transition-colors duration-200">
               Contact
             </a>
           </motion.div>
@@ -209,7 +209,7 @@ export default function Home() {
             {metrics.map(({ value, label }) => (
               <div key={label} className="flex flex-col">
                 <span className="font-syne font-black text-4xl xl:text-3xl leading-none dark:text-light text-ink">{value}</span>
-                <span className="font-mono text-[10px] uppercase tracking-widest text-muted mt-1">{label}</span>
+                <span className="font-mono text-xs uppercase tracking-widest text-muted mt-1">{label}</span>
               </div>
             ))}
           </motion.div>

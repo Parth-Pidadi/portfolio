@@ -16,14 +16,14 @@ const Footer = () => {
           <Link
             href="https://github.com/Parth-Pidadi"
             target="_blank"
-            className="font-mono text-xs tracking-widest uppercase text-muted hover:text-gold dark:hover:text-gold transition-colors duration-200"
+            className="font-mono font-bold text-sm tracking-widest uppercase text-ink dark:text-light hover:text-gold dark:hover:text-gold transition-colors duration-200"
           >
             GitHub
           </Link>
           <Link
             href="https://www.linkedin.com/in/parthpidadi/"
             target="_blank"
-            className="font-mono text-xs tracking-widest uppercase text-muted hover:text-gold dark:hover:text-gold transition-colors duration-200"
+            className="font-mono font-bold text-sm tracking-widest uppercase text-ink dark:text-light hover:text-gold dark:hover:text-gold transition-colors duration-200"
           >
             LinkedIn
           </Link>
@@ -31,7 +31,7 @@ const Footer = () => {
             href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=pidadiparth@gmail.com"
             target="_blank"
             rel="noreferrer"
-            className="font-mono text-xs tracking-widest uppercase text-muted hover:text-teal dark:hover:text-teal transition-colors duration-200"
+            className="font-mono font-bold text-sm tracking-widest uppercase text-ink dark:text-light hover:text-teal dark:hover:text-teal transition-colors duration-200"
           >
             Email
           </a>
