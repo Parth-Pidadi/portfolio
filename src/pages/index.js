@@ -40,13 +40,13 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="relative w-full h-56 sm:h-44 xs:h-36 overflow-hidden flex-shrink-0"
+          className="relative w-full h-72 sm:h-60 xs:h-52 overflow-hidden flex-shrink-0"
         >
           <Image
             src={ProfilePic}
             alt="Parth Pidadi"
             fill
-            className="object-cover object-top"
+            className="object-cover object-center"
             priority
             sizes="100vw"
           />
@@ -57,12 +57,12 @@ export default function Home() {
         </motion.div>
 
         {/* Text content */}
-        <div className="flex-1 flex flex-col justify-center px-6 sm:px-5 xs:px-4 py-8 relative">
+        <div className="flex-1 flex flex-col justify-center px-6 sm:px-5 xs:px-4 py-4 relative">
           <div className="absolute inset-0 dot-grid-dark dark:block hidden pointer-events-none opacity-50" />
           <div className="absolute inset-0 dot-grid-light dark:hidden block pointer-events-none opacity-50" />
           <div className="relative z-10">
             {/* Badge */}
-            <motion.div {...fadeUp(0.1)} className="mb-5">
+            <motion.div {...fadeUp(0.1)} className="mb-3">
               <span className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.15em] uppercase text-ink/70 dark:text-light/70 border border-border dark:border-border rounded-full px-3 py-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal inline-block animate-pulse flex-shrink-0" />
                 MS DS @ Stony Brook · Seeking FT&apos;26
@@ -90,7 +90,7 @@ export default function Home() {
             </motion.p>
 
             {/* Tags */}
-            <motion.div {...fadeUp(0.44)} className="flex flex-wrap gap-1.5 mb-6">
+            <motion.div {...fadeUp(0.44)} className="flex flex-wrap gap-1.5 mb-4">
               {tags.map((tag) => (
                 <span key={tag} className="font-mono text-[9px] tracking-[0.12em] uppercase px-2.5 py-1 rounded-full border border-border dark:border-border text-ink/65 dark:text-light/65">
                   {tag}
@@ -99,7 +99,7 @@ export default function Home() {
             </motion.div>
 
             {/* CTAs */}
-            <motion.div {...fadeUp(0.5)} className="flex flex-wrap gap-2 mb-8">
+            <motion.div {...fadeUp(0.5)} className="flex flex-wrap gap-2 mb-4">
               <Link href="/Parth_Pidadi_Resume.pdf" target="_blank"
                 className="inline-flex items-center gap-1.5 px-5 py-2 rounded-lg bg-gold text-light font-syne font-bold text-xs tracking-[0.1em] uppercase">
                 Resume ↓
