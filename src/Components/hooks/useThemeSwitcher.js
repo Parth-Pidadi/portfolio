@@ -18,14 +18,9 @@ const useThemeSwitcher = () => {
         } else {
           document.documentElement.classList.remove("dark");
         }
-      }else{
-        let check = mediaQuery.matches ? "dark" : "light";
-        setMode(check);
-        if (check === "dark") {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-        }
+      } else {
+        setMode("dark");
+        document.documentElement.classList.add("dark");
       }
     };
     handleChange()
