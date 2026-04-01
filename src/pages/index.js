@@ -139,9 +139,9 @@ export default function Home() {
         <div className="absolute inset-0 dot-grid-light dark:hidden block pointer-events-none" />
 
         {/* Left: Text */}
-        <div className="relative z-10 flex-1 flex flex-col justify-center px-16 xl:px-12 py-6 max-w-[62%] xl:max-w-[64%]">
+        <div className="relative z-10 flex-1 flex flex-col justify-center px-16 xl:px-12 py-4 max-w-[62%] xl:max-w-[64%]">
           {/* Badge */}
-          <motion.div {...fadeUp(0.05)} className="mb-4">
+          <motion.div {...fadeUp(0.05)} className="mb-3">
             <span className="inline-flex items-center gap-2 font-mono text-xs tracking-[0.18em] uppercase text-ink/70 dark:text-light/70 border border-border dark:border-border rounded-full px-4 py-1.5 bg-surface/40 backdrop-blur-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-teal inline-block animate-pulse" />
               MS DS @ Stony Brook · Seeking Full-time&apos;26
@@ -152,14 +152,14 @@ export default function Home() {
           <motion.div {...fadeUp(0.15)} className="mb-2">
             <h1
               className="font-syne font-black leading-[0.85] tracking-tight dark:text-light text-ink select-none"
-              style={{ fontSize: "clamp(5.5rem, 11vw, 11rem)" }}
+              style={{ fontSize: "clamp(4rem, 8.5vw, 8.5rem)" }}
             >
               PARTH<br />PIDADI<span className="text-gold">.</span>
             </h1>
           </motion.div>
 
           {/* Role */}
-          <motion.p {...fadeUp(0.28)} className="font-syne font-bold text-xl tracking-[0.2em] uppercase text-gold mb-3">
+          <motion.p {...fadeUp(0.28)} className="font-syne font-bold text-xl tracking-[0.2em] uppercase text-gold mb-2">
             Data Scientist & ML Engineer
           </motion.p>
 
@@ -171,7 +171,7 @@ export default function Home() {
           </motion.p>
 
           {/* Tags */}
-          <motion.div {...fadeUp(0.45)} className="flex flex-wrap gap-2 mb-5">
+          <motion.div {...fadeUp(0.45)} className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag) => (
               <span key={tag}
                 className="font-mono text-xs tracking-[0.15em] uppercase px-3 py-1.5 rounded-full border border-border dark:border-border text-ink/65 dark:text-light/65 hover:border-gold dark:hover:border-gold hover:text-gold dark:hover:text-gold transition-colors duration-200">
@@ -181,7 +181,7 @@ export default function Home() {
           </motion.div>
 
           {/* CTAs */}
-          <motion.div {...fadeUp(0.52)} className="flex flex-wrap gap-3 mb-6">
+          <motion.div {...fadeUp(0.52)} className="flex flex-wrap gap-3 mb-4">
             <Link href="/Parth_Pidadi_Resume.pdf" target="_blank"
               className="inline-flex items-center gap-2 px-7 py-2.5 rounded-lg bg-gold text-light font-syne font-bold text-base tracking-[0.1em] uppercase hover:bg-gold-dim transition-colors duration-200 shadow-lg shadow-gold/20">
               Resume
