@@ -138,11 +138,11 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.96, y: -8 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.96, y: -8 }}
-            transition={{ duration: 0.2 }}
-            className="min-w-[75vw] z-30 flex flex-col fixed justify-center items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-ink/95 dark:bg-light/95 rounded-2xl backdrop-blur-md py-16 gap-1 shadow-2xl border border-border dark:border-border-light"
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-0 z-30 flex flex-col justify-center items-center bg-ink dark:bg-light"
           >
             <CustomMobileLink toggle={toggle} href="/" title="Home" />
             <CustomMobileLink toggle={toggle} href="/about" title="About" />
