@@ -7,13 +7,19 @@ import Transitions from "@/Components/Transitions";
 import { motion } from "framer-motion";
 import { GithubIcon } from "@/Components/Icons";
 
-// Project images (existing ones)
+// Existing images
 import uberimg from "../../public/images/projects/Uber-analytics.png";
 import ytimg from "../../public/images/projects/YT-analytics.png";
 import anprimg from "../../public/images/projects/ANPR.jpeg";
 import olympicsimg from "../../public/images/projects/olympics.jpeg";
-import bscimg from "../../public/images/projects/Black Scholes Calculator.jpeg";
-import Portfolioimg from "../../public/images/projects/Portfolio.png";
+
+// New project images
+import docbrainimg from "../../public/images/projects/docbrain.png";
+import llmimg from "../../public/images/projects/llm.png";
+import logmonitorimg from "../../public/images/projects/logmonitor.png";
+import chatimg from "../../public/images/projects/chat.png";
+import movieimg from "../../public/images/projects/movie.png";
+import mepsimg from "../../public/images/projects/meps.png";
 
 const CATEGORIES = {
   AI: { label: "AI / LLM", color: "text-gold border-gold/30 bg-gold/5" },
@@ -33,7 +39,7 @@ const projects = [
     link: "https://github.com/Parth-Pidadi/docbrain",
     category: "AI",
     featured: true,
-    img: null,
+    img: docbrainimg,
     metrics: ["Sub-second response", "4+ doc types", "5 file formats"],
   },
   {
@@ -45,7 +51,7 @@ const projects = [
     link: "https://github.com/Parth-Pidadi/Log-Monitor",
     category: "DATA",
     featured: true,
-    img: null,
+    img: logmonitorimg,
     metrics: ["100K+ events/hr", "Zero always-on infra", "Serverless search"],
   },
   {
@@ -57,7 +63,7 @@ const projects = [
     link: "https://github.com/csmsum/bigdata",
     category: "AI",
     featured: true,
-    img: null,
+    img: llmimg,
     metrics: ["99.2% pipeline reliability", "30%+ less hallucination", "9-stage pipeline"],
   },
   {
@@ -69,7 +75,7 @@ const projects = [
     link: "https://github.com/Parth-Pidadi/MEPS-Healthcare-Analysis",
     category: "ML",
     featured: false,
-    img: null,
+    img: mepsimg,
     metrics: ["82% accuracy", "100K+ records", "12+ demographic segments"],
   },
   {
@@ -81,7 +87,7 @@ const projects = [
     link: "https://github.com/Parth-Pidadi/Chat-PDF-RAG",
     category: "AI",
     featured: false,
-    img: null,
+    img: chatimg,
     metrics: ["85%+ retrieval accuracy", "Sub-2s response", "50+ concurrent users"],
   },
   {
@@ -93,7 +99,7 @@ const projects = [
     link: "https://github.com/Parth-Pidadi/Movie_Explorer-TMDB",
     category: "FULLSTACK",
     featured: false,
-    img: null,
+    img: movieimg,
     metrics: ["SSR + API proxy", "TypeScript", "Vercel deployed"],
   },
   {
@@ -135,7 +141,7 @@ const projects = [
   {
     title: "Olympics 105 Years Data Visualisation",
     summary:
-      "Comprehensive analysis of 105 years of Olympic Games history — participant diversity, gender distribution, country performance, medal counts, event growth. Power BI dashboard for interactive slicing by year, country, sport, and gender. A storytelling exercise over a rich historical dataset.",
+      "Comprehensive analysis of 105 years of Olympic Games history — participant diversity, gender distribution, country performance, medal counts, event growth. Power BI dashboard for interactive slicing by year, country, sport, and gender.",
     stack: ["Power BI", "Python", "Jupyter Notebook"],
     github: "https://github.com/Parth-Pidadi/OlympicsDataVisualisation",
     link: "https://github.com/Parth-Pidadi/OlympicsDataVisualisation",
@@ -157,8 +163,8 @@ const FeaturedCard = ({ title, summary, stack, github, link, category, metrics, 
       className="group relative rounded-2xl border border-border dark:border-border bg-light-surface dark:bg-surface overflow-hidden hover:border-gold/40 dark:hover:border-gold/40 transition-colors duration-300"
     >
       <div className="grid grid-cols-2 lg:grid-cols-1">
-        {/* Image / placeholder */}
-        <div className="relative overflow-hidden bg-elevated dark:bg-elevated min-h-[240px] lg:min-h-[180px] sm:min-h-[150px]">
+        {/* Image */}
+        <div className="relative overflow-hidden bg-elevated dark:bg-elevated min-h-[260px] lg:min-h-[200px] sm:min-h-[160px]">
           {img ? (
             <Image
               src={img}
@@ -181,7 +187,7 @@ const FeaturedCard = ({ title, summary, stack, github, link, category, metrics, 
         {/* Content */}
         <div className="p-8 lg:p-6 sm:p-4 flex flex-col">
           <div className="flex items-start justify-between gap-3 mb-3">
-            <span className={`font-mono text-[10px] tracking-[0.15em] uppercase px-2.5 py-1 rounded-full border ${cat.color} flex-shrink-0`}>
+            <span className={`font-mono text-xs tracking-[0.15em] uppercase px-3 py-1 rounded-full border ${cat.color} flex-shrink-0`}>
               {cat.label}
             </span>
             <div className="flex gap-3">
@@ -198,18 +204,18 @@ const FeaturedCard = ({ title, summary, stack, github, link, category, metrics, 
             </div>
           </div>
 
-          <h2 className="font-syne font-extrabold text-xl sm:text-lg dark:text-light text-ink mb-3 leading-tight">
+          <h2 className="font-syne font-extrabold text-2xl sm:text-xl dark:text-light text-ink mb-3 leading-tight">
             {title}
           </h2>
-          <p className="font-lora text-sm leading-relaxed text-muted dark:text-muted-light mb-4 flex-1 line-clamp-5 lg:line-clamp-none">
+          <p className="font-lora text-base sm:text-sm leading-relaxed text-ink/75 dark:text-light/75 mb-4 flex-1 line-clamp-5 lg:line-clamp-none">
             {summary}
           </p>
 
           {/* Metrics */}
           {metrics && (
-            <div className="flex flex-wrap gap-1.5 mb-4">
+            <div className="flex flex-wrap gap-2 mb-4">
               {metrics.map((m) => (
-                <span key={m} className="font-mono text-[10px] tracking-wide px-2 py-0.5 rounded bg-gold/10 text-gold border border-gold/20">
+                <span key={m} className="font-mono text-xs tracking-wide px-3 py-1 rounded-full bg-gold/10 text-gold border border-gold/20">
                   {m}
                 </span>
               ))}
@@ -217,9 +223,9 @@ const FeaturedCard = ({ title, summary, stack, github, link, category, metrics, 
           )}
 
           {/* Stack */}
-          <div className="flex flex-wrap gap-1.5">
+          <div className="flex flex-wrap gap-2">
             {stack.map((s) => (
-              <span key={s} className="font-mono text-[10px] tracking-wide px-2 py-1 rounded border border-border dark:border-border text-muted dark:text-muted-light">
+              <span key={s} className="font-mono text-xs tracking-wide px-2.5 py-1 rounded border border-border dark:border-border text-ink/65 dark:text-light/65">
                 {s}
               </span>
             ))}
@@ -241,57 +247,57 @@ const SmallCard = ({ title, summary, stack, github, link, category, metrics, img
       className="group relative rounded-2xl border border-border dark:border-border bg-light-surface dark:bg-surface overflow-hidden hover:border-gold/40 dark:hover:border-gold/40 transition-colors duration-300 flex flex-col"
     >
       {/* Image strip */}
-      {img && (
-        <div className="relative h-44 overflow-hidden bg-elevated dark:bg-elevated flex-shrink-0">
-          <Image
-            src={img}
-            alt={title}
-            className="w-full h-full object-cover opacity-75 group-hover:opacity-90 group-hover:scale-[1.03] transition-all duration-500"
-            fill
-            sizes="(max-width: 639px) 100vw, 50vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent" />
-        </div>
-      )}
-
-      {!img && (
-        <div className="relative h-28 overflow-hidden bg-elevated dark:bg-elevated flex-shrink-0 flex items-center justify-center">
-          <div className="dot-grid-dark absolute inset-0 opacity-40" />
-          <span className="font-syne font-extrabold text-4xl text-gold/15 relative z-10 select-none">{title.charAt(0)}</span>
-        </div>
-      )}
+      <div className="relative h-48 overflow-hidden bg-elevated dark:bg-elevated flex-shrink-0">
+        {img ? (
+          <>
+            <Image
+              src={img}
+              alt={title}
+              className="w-full h-full object-cover opacity-75 group-hover:opacity-90 group-hover:scale-[1.03] transition-all duration-500"
+              fill
+              sizes="(max-width: 639px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent" />
+          </>
+        ) : (
+          <>
+            <div className="dot-grid-dark absolute inset-0 opacity-40" />
+            <span className="font-syne font-extrabold text-4xl text-gold/15 absolute inset-0 flex items-center justify-center select-none">{title.charAt(0)}</span>
+          </>
+        )}
+      </div>
 
       {/* Content */}
-      <div className="p-5 sm:p-4 xs:p-3 flex flex-col flex-1">
+      <div className="p-5 sm:p-4 flex flex-col flex-1">
         <div className="flex items-center justify-between mb-3">
-          <span className={`font-mono text-[10px] tracking-[0.12em] uppercase px-2.5 py-1 rounded-full border ${cat.color}`}>
+          <span className={`font-mono text-xs tracking-[0.12em] uppercase px-2.5 py-1 rounded-full border ${cat.color}`}>
             {cat.label}
           </span>
           <div className="flex gap-2.5">
             {github && github !== "#" && (
-              <a href={github} target="_blank" rel="noreferrer" className="w-4 text-muted hover:text-gold dark:hover:text-gold transition-colors">
+              <a href={github} target="_blank" rel="noreferrer" className="w-5 text-muted hover:text-gold dark:hover:text-gold transition-colors">
                 <GithubIcon />
               </a>
             )}
             {link && link !== "#" && link !== github && (
               <a href={link} target="_blank" rel="noreferrer" className="text-muted hover:text-gold dark:hover:text-gold transition-colors">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               </a>
             )}
           </div>
         </div>
 
-        <h2 className="font-syne font-extrabold text-lg dark:text-light text-ink mb-2 leading-tight">
+        <h2 className="font-syne font-extrabold text-xl dark:text-light text-ink mb-2 leading-tight">
           {title}
         </h2>
-        <p className="font-lora text-sm leading-relaxed text-muted dark:text-muted-light mb-4 flex-1 line-clamp-4">
+        <p className="font-lora text-sm leading-relaxed text-ink/75 dark:text-light/75 mb-4 flex-1 line-clamp-4">
           {summary}
         </p>
 
         {metrics && (
-          <div className="flex flex-wrap gap-1 mb-3">
+          <div className="flex flex-wrap gap-1.5 mb-3">
             {metrics.slice(0, 2).map((m) => (
-              <span key={m} className="font-mono text-[9px] tracking-wide px-2 py-0.5 rounded bg-gold/10 text-gold border border-gold/20">
+              <span key={m} className="font-mono text-xs tracking-wide px-2.5 py-1 rounded-full bg-gold/10 text-gold border border-gold/20">
                 {m}
               </span>
             ))}
@@ -300,12 +306,12 @@ const SmallCard = ({ title, summary, stack, github, link, category, metrics, img
 
         <div className="flex flex-wrap gap-1.5">
           {stack.slice(0, 5).map((s) => (
-            <span key={s} className="font-mono text-[10px] tracking-wide px-2 py-0.5 rounded border border-border dark:border-border text-muted dark:text-muted-light">
+            <span key={s} className="font-mono text-xs tracking-wide px-2.5 py-1 rounded border border-border dark:border-border text-ink/65 dark:text-light/65">
               {s}
             </span>
           ))}
           {stack.length > 5 && (
-            <span className="font-mono text-[10px] px-2 py-0.5 rounded border border-border dark:border-border text-muted">
+            <span className="font-mono text-xs px-2.5 py-1 rounded border border-border dark:border-border text-muted">
               +{stack.length - 5}
             </span>
           )}
@@ -339,12 +345,12 @@ const ProjectsPage = () => {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <p className="font-mono text-xs tracking-[0.2em] uppercase text-muted mb-3">/ selected work</p>
+            <p className="font-mono text-sm tracking-[0.2em] uppercase text-ink/70 dark:text-light/70 font-semibold mb-3">/ selected work</p>
             <h1 className="font-syne font-black text-6xl md:text-5xl sm:text-4xl xs:text-3xl leading-tight">
               Projects
               <span className="text-gold">.</span>
             </h1>
-            <p className="font-lora text-base sm:text-sm text-muted dark:text-muted-light mt-4 max-w-xl">
+            <p className="font-lora text-lg sm:text-base text-ink/70 dark:text-light/70 mt-4 max-w-xl">
               Production systems, research experiments, and engineering deep-dives across
               AI, data infrastructure, and full-stack development.
             </p>
@@ -353,7 +359,7 @@ const ProjectsPage = () => {
           {/* Category legend */}
           <div className="flex flex-wrap gap-2 mb-12">
             {Object.values(CATEGORIES).map((c) => (
-              <span key={c.label} className={`font-mono text-[10px] tracking-widest uppercase px-3 py-1 rounded-full border ${c.color}`}>
+              <span key={c.label} className={`font-mono text-xs tracking-widest uppercase px-3 py-1.5 rounded-full border ${c.color}`}>
                 {c.label}
               </span>
             ))}
@@ -361,7 +367,7 @@ const ProjectsPage = () => {
 
           {/* Featured projects */}
           <div className="mb-6">
-            <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-muted mb-6">Featured</p>
+            <p className="font-mono text-xs tracking-[0.2em] uppercase text-muted mb-6">Featured</p>
             <div className="flex flex-col gap-6">
               {featured.map((p, i) => (
                 <FeaturedCard key={p.title} {...p} index={i} />
@@ -372,7 +378,7 @@ const ProjectsPage = () => {
           {/* Divider */}
           <div className="flex items-center gap-4 my-12">
             <div className="flex-1 h-px bg-border dark:bg-border" />
-            <span className="font-mono text-[11px] tracking-[0.2em] uppercase text-muted px-4">All Projects</span>
+            <span className="font-mono text-xs tracking-[0.2em] uppercase text-muted px-4">All Projects</span>
             <div className="flex-1 h-px bg-border dark:bg-border" />
           </div>
 
