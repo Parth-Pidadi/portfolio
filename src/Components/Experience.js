@@ -53,7 +53,7 @@ const Details = ({ company, position, time, place, bullets }) => {
   return (
     <li
       ref={ref}
-      className="my-10 first:mt-0 last:mb-0 w-[65%] mx-auto flex flex-col items-start justify-between md:w-[80%] sm:w-[90%] xs:w-full"
+      className="my-10 first:mt-0 last:mb-0 w-[65%] mx-auto flex flex-col items-start justify-between md:w-[80%] sm:w-[90%] xs:w-full xs:pl-14 sm:pl-10"
     >
       <LiIcon reference={ref} />
       <motion.div
